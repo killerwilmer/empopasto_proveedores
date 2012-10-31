@@ -13,10 +13,10 @@
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="tab1">
-            <div> <?php echo Form::text("proveedores.identificacion", "class='input-large' placeholder='Identificaciòn persona'") ?></div>
-            <div> <?php echo Form::text("proveedores.tipood", "class='input-large' placeholder='Tipo Identificaciòn'") ?></div>
-            <div> <?php echo Form::text("proveedores.nombres", "class='input-large' placeholder='Nombres'") ?></div>
-            <div> <?php echo Form::text("proveedores.apellidos", "class='input-large' placeholder='Pellidos'") ?></div>
+            <div> <?php echo Form::text('proveedores.identificacion', 'class="input-large" placeholder="Identificación persona" title="Se necesita una identificación" required') ?></div>
+            <div> <?php echo Form::text('proveedores.tipood', 'class="input-large" placeholder="Tipo Identificaciòn"') ?></div>
+            <div> <?php echo Form::text('proveedores.nombres', 'class="input-large" placeholder="Nombres"') ?></div>
+            <div> <?php echo Form::text('proveedores.apellidos', 'class="input-large" placeholder="Pellidos"') ?></div>
         </div>
         <div class="tab-pane" id="tab2">
             <div> <?php echo Form::text("proveedores.rut", "class='input-large' placeholder='Rut'") ?></div>
