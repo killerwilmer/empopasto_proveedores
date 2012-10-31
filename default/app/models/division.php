@@ -10,7 +10,7 @@
  *
  * @author Admin
  */
-class division extends ActiveRecord {
+class Division extends ActiveRecord {
     //put your code here
 }
 

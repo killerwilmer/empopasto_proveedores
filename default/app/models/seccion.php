@@ -10,7 +10,7 @@
  *
  * @author Admin
  */
-class seccion extends ActiveRecord {
+class Seccion extends ActiveRecord {
     //put your code here
 }
 

@@ -10,7 +10,7 @@
  *
  * @author wilmerarteaga
  */
-class actividad extends ActiveRecord {
+class Actividad extends ActiveRecord {
     //put your code here
 }
 

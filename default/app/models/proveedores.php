@@ -10,7 +10,7 @@
  *
  * @author wilmerarteaga
  */
-class proveedores extends ActiveRecord {
+class Proveedores extends ActiveRecord {
     //put your code here
 }
 

@@ -6,11 +6,11 @@
  */
 
 /**
- * Description of proyecto
+ * Description of actividad_has_proveedores
  *
  * @author wilmerarteaga
  */
-class Proyecto extends ActiveRecord {
+class ActividadHasProveedores extends ActiveRecord {
     //put your code here
 }
 
