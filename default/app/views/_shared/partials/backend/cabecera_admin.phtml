@@ -27,10 +27,8 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Proveedores <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Listar<i class="icon-headphones"></i></a>
-                            </li>
-                            <li><a href="#">Nuevo</a></li>
+                            <li><? echo Html::link("proveedores/nuevo", "Nuevo") ?></li>
+                            <li><? echo Html::link("proveedores/index", "Listar") ?></li>
                         </ul>
                     </li>
 
