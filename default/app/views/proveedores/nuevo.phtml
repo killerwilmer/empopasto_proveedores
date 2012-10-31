@@ -1,0 +1,81 @@
+<div class="span10">
+    <div><?php echo View::content()?></div>
+    <?php echo Form::open() ?>
+    <table>
+        <tr><td style="width: 90%"><legend>Crear nueva historia</legend>
+    </td><td style="width: 10%"><?php echo Form::submit("Guardar","class='btn btn-primary'")?></td></tr>
+</table>
+
+<div class="tabbable"> 
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Historia</a></li>
+        <li><a href="#tab2" data-toggle="tab">Datos personales</a></li>
+        <li><a href="#tab3" data-toggle="tab">Antecedentes</a></li>
+        <li><a href="#tab4" data-toggle="tab">Antecedentes ginecológicos</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+
+            <div> <?php echo Form::text("historia.identificacion", "class='input-large' placeholder='Historia clínica'") ?></div>
+            <div> <?php echo Form::text("historia.nombres", "class='input-large' placeholder='Nombres' value='hola'") ?></div>
+            <div><?php echo Form::text("historia.apellidos", "class='input-large' placeholder='Apellidos'") ?></div>
+            <div><?php echo Form::label("Programa", "tipoprograma")?>
+                <?php echo Form::dbSelect("tipoprograma.tipoprograma_id", "nombre") ?></div>
+            <div><?php echo Form::label("EPS", "tipoeps")?>
+                <?php echo Form::dbSelect("tipoeps.tipoeps_id", "nombre") ?></div>
+            <div> <?php echo Form::label("Tipo régimen", "tiporegimen")?>
+                <?php echo Form::dbSelect("tiporegimen.tiporegimen_id", "nombre") ?></div>
+            <div><?php echo Form::text("historia.carneteps", "class='input-large' placeholder='Número de carnet'") ?></div>
+
+        </div>
+        <div class="tab-pane" id="tab2">
+            <div><?php echo Form::label("Tipo identificación:","tipoidentificacion")?>
+                <?php echo Form::dbSelect("tipoidentificacion.tipoidentificacion_id", "nombre") ?></div>
+            <div><?php echo Form::text("historia.identificacion", "class='input-xlarge' placeholder='Identificación'") ?></div>
+            <div><?php echo Form::text("historia.telefono1", "class='input-xlarge' placeholder='Teléfono 1'") ?></div>
+            <div><?php echo Form::text("historia.telefono2", "class='input-xlarge' placeholder='Teléfono 2'") ?></div>
+            <div><?php echo Form::text("historia.acudiente", "class='input-xlarge' placeholder='Acudiente'") ?></div>
+            <div><?php echo Form::text("historia.telefonoacudiente", "class='input-xlarge' placeholder='Telefono acudiente'") ?></div>
+            <div><?php echo Form::label("Fecha nacimiento:","fechanacimiento")?>
+                <?php echo Form::date("historia.fechanacimiento")?></div>
+            <div><?php echo Form::label("Genero","tipogenero")?>
+                <?php echo Form::dbSelect("tipogenero.tipogenero_id", "nombre") ?></div>
+            <div><?php echo Form::label("Estado civil","tipoestadocivil")?>
+                <?php echo Form::dbSelect("tipoestadocivil.tipoestadocivil_id", "nombre") ?></div>
+            <div><?php echo Form::text("historia.procedencia", "class='input-xlarge' placeholder='Ciudad procedencia'") ?></div>
+            <div><?php echo Form::text("historia.residencia", "class='input-xlarge' placeholder='Residencia'") ?></div>
+            <div><?php echo Form::label("Tipo zona residencia:","tipozona")?>
+                <?php echo Form::dbSelect("tipozona.tipozona_id", "nombre") ?></div>
+        </div>
+        <div class="tab-pane" id="tab3">
+            <div>Antecedentes personales</div>
+            <div><?php echo Form::textarea("historia.antecedentespersonales", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Antecedentes familiares</div> 
+            <div><?php echo Form::textarea("historia.antecedentesfami", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Hábitos</div> 
+            <div><?php echo Form::textarea("historia.habitos", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+
+        </div>
+        <div class="tab-pane" id="tab4">
+
+            <div>Menarquia</div> 
+            <div><?php echo Form::textarea("historia.menarquia", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Ciclos regulares</div>
+            <div><?php echo Form::textarea("historia.ciclosregulares", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Escala</div>
+            <div><?php echo Form::textarea("historia.escala", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Gestaciones</div>
+            <div><?php echo Form::textarea("historia.gestaciones", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Edad inicio sexual</div>
+            <div><?php echo Form::textarea("historia.edadiniciosexual", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Número parejas</div>
+            <div><?php echo Form::textarea("historia.nroparejas", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Antecedentes de infecciones</div>
+            <div><?php echo Form::textarea("historia.antinfecciones", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+            <div>Citologías</div>
+            <div><?php echo Form::textarea("historia.citologias", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+        </div>
+    </div>
+</div>
+<?php echo Form::close() ?>
+</div>
