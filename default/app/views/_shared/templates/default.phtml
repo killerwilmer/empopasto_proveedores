@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Gestión de Alta Calidad.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <style type="text/css">
+            body {
+                padding-top: 50px;
+                padding-bottom: 40px;
+            }
+            .sidebar-nav {
+                padding: 9px 0;
+            }
+            #TextBoxesGroup div {
+                margin-bottom: 10px;
+            }​
+        </style>
+        <?php
+        Tag::css('backend/bootstrap');
+        Tag::css('backend/bootstrap-responsive.min');
+
+        echo Html::includeCss();
+        echo Tag::js('jquery/jquery.min');
+        echo Tag::js('jquery/jquery.kumbiaphp');
+        echo Tag::js('bootstrap/bootstrap');
+        echo Tag::js('global');
+        ?>
+    </head>
+    <body>
+        <?php View::partial('backend/cabecera') ?>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Facultades</li>
+                            <li><?php echo Html::link('listarfacultades/educacion', 'Educación') ?></li>
+                            <li><?php echo Html::link('listarfacultades/humanidades', 'Humanidades y Ciencias Sociales') ?></li>
+                            <li><?php echo Html::link('listarfacultades/salud', 'Ciencias de la Salud') ?></li>
+                            <li><?php echo Html::link('listarfacultades/ingenierias', 'Ingenierías') ?></li>
+                            <li><?php echo Html::link('listarfacultades/contables', 'Ciencias Contables y Administrativas') ?></li>
+                            <li><?php echo Html::link('listarfacultades/postgrados', 'Postgrados y Relaciones Internacionales') ?></li>
+                            <li class="nav-header">Menú principal</li>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Mariana</a></li>
+                            <li><a href="#">Google</a></li>
+                        </ul>
+                    </div><!--/.well -->
+                </div><!--/span-->
+                <div class="span9">
+                    <div class="hero-unit">
+                        <?php View::content() ?>
+                    </div>
+                </div><!--/span-->
+            </div><!--/row-->
+
+            <hr>
+
+            <?php View::partial('backend/pie') ?>
+
+        </div><!--/.fluid-container-->
+    </body>
+</html>
