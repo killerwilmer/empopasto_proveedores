@@ -6,12 +6,12 @@
  */
 
 /**
- * Description of seccion_controller
+ * Description of tipoentidad_controller
  *
  * @author Admin
  */
-class SeccionController extends ScaffoldController {
-    public $model = 'Seccion';
+class TipoentidadController extends ScaffoldController {
+    public $model = 'tipo_entidad';
 }
 
 ?>

@@ -6,12 +6,12 @@
  */
 
 /**
- * Description of seccion_controller
+ * Description of tipo_proveedor
  *
  * @author Admin
  */
-class SeccionController extends ScaffoldController {
-    public $model = 'Seccion';
+class TipoProveedor extends ActiveRecord {
+    //put your code here
 }
 
 ?>

@@ -6,12 +6,12 @@
  */
 
 /**
- * Description of seccion_controller
+ * Description of tipo_entidad
  *
  * @author Admin
  */
-class SeccionController extends ScaffoldController {
-    public $model = 'Seccion';
+class TipoEntidad extends ActiveRecord {
+    //put your code here
 }
 
 ?>

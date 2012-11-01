@@ -6,12 +6,12 @@
  */
 
 /**
- * Description of seccion_controller
+ * Description of ciudad
  *
  * @author Admin
  */
-class SeccionController extends ScaffoldController {
-    public $model = 'Seccion';
+class Ciudad extends ActiveRecord {
+    //put your code here
 }
 
 ?>

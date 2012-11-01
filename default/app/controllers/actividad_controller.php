@@ -11,7 +11,7 @@
  * @author wilmerarteaga
  */
 class ActividadController extends ScaffoldController {
-    public $model = 'actividad';
+    public $model = 'Actividad';
 }
 
 ?>
