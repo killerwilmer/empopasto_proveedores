@@ -1,0 +1,22 @@
+[Fri, 02 Nov 12 12:16:46 -0400][CRITICAL] exception 'KumbiaException' with message 'La página 25 no existe en el páginador' in F:\xampp\htdocs\empopasto_proveedores\core\libs\kumbia_active_record\behaviors\paginate.php:121
+Stack trace:
+#0 [internal function]: Paginator::paginate(Object(Proveedores), 'page: 25')
+#1 F:\xampp\htdocs\empopasto_proveedores\core\libs\kumbia_active_record\kumbia_active_record.php(2373): call_user_func_array(Array, Array)
+#2 F:\xampp\htdocs\empopasto_proveedores\default\app\models\proveedores.php(22): KumbiaActiveRecord->paginate('page: 25')
+#3 F:\xampp\htdocs\empopasto_proveedores\default\app\controllers\proveedores_controller.php(20): Proveedores->paginar('25')
+#4 [internal function]: ProveedoresController->index('25')
+#5 F:\xampp\htdocs\empopasto_proveedores\core\kumbia\dispatcher.php(79): ReflectionMethod->invokeArgs(Object(ProveedoresController), Array)
+#6 F:\xampp\htdocs\empopasto_proveedores\core\kumbia\bootstrap.php(138): Dispatcher::execute(Array)
+#7 F:\xampp\htdocs\empopasto_proveedores\default\public\index.php(81): require('F:\xampp\htdocs...')
+#8 {main}
+[Fri, 02 Nov 12 12:16:50 -0400][CRITICAL] exception 'KumbiaException' with message 'La página 26 no existe en el páginador' in F:\xampp\htdocs\empopasto_proveedores\core\libs\kumbia_active_record\behaviors\paginate.php:121
+Stack trace:
+#0 [internal function]: Paginator::paginate(Object(Proveedores), 'page: 26')
+#1 F:\xampp\htdocs\empopasto_proveedores\core\libs\kumbia_active_record\kumbia_active_record.php(2373): call_user_func_array(Array, Array)
+#2 F:\xampp\htdocs\empopasto_proveedores\default\app\models\proveedores.php(22): KumbiaActiveRecord->paginate('page: 26')
+#3 F:\xampp\htdocs\empopasto_proveedores\default\app\controllers\proveedores_controller.php(20): Proveedores->paginar('26')
+#4 [internal function]: ProveedoresController->index('26')
+#5 F:\xampp\htdocs\empopasto_proveedores\core\kumbia\dispatcher.php(79): ReflectionMethod->invokeArgs(Object(ProveedoresController), Array)
+#6 F:\xampp\htdocs\empopasto_proveedores\core\kumbia\bootstrap.php(138): Dispatcher::execute(Array)
+#7 F:\xampp\htdocs\empopasto_proveedores\default\public\index.php(81): require('F:\xampp\htdocs...')
+#8 {main}

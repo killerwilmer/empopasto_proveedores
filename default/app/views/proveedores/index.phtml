@@ -1,14 +1,13 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<legend>Proveedores Registrados.</legend>
+
+<div id="mensajes_flash" >        
+    <?php View::content() ?>
+</div> 
+<?php
+View::partial('backend/barra_superior_listas', FALSE, array('texto' => 'Crear Usuario', 'opciones' => FALSE));
+$dt = new DataTable($proveedores);
+$dt->addHeaders('id', 'Identificacion', 'Nombre Completo', 'Editar');
+$dt->addFields('id', 'identificacion', 'nombcomp');
+$dt->imgLink('figuras/editar.png', 'admin/usuarios/editar');
+echo $dt->render('class="table table-bordered table-striped"');
+?>

@@ -10,14 +10,23 @@
  *
  * @author wilmerarteaga
  */
+Load::models('proveedores');
+
 class ProveedoresController extends ApplicationController {
-    public function index(){
+
+    public function index($pagina = 1) {
+        try {
+            $pro = new Proveedores();
+            $this->proveedores = $pro->paginar($pagina);
+        } catch (KumbiaException $e) {
+            View::excepcion($e);
+        }
+    }
+
+    public function nuevo() {
         
     }
-    
-    public function nuevo(){
-        
-    }
+
 }
 
 ?>

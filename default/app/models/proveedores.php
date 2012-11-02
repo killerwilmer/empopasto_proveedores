@@ -11,7 +11,17 @@
  * @author wilmerarteaga
  */
 class Proveedores extends ActiveRecord {
-    //put your code here
+
+    /**
+     * Devuelve los usuarios de la bd Paginados.
+     * 
+     * @param  integer $pagina numero de pagina a mostrar
+     * @return array          resultado de la consulta
+     */
+    public function paginar($pagina = 1) {
+        return $this->paginate("page: $pagina");
+    }
+
 }
 
 ?>
