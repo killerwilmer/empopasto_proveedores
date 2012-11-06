@@ -3621,7 +3621,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav {
-  margin-bottom: 20px;
+  margin-bottom: 5px;/* 20 */
   margin-left: 0;
   list-style: none;
 }
@@ -3656,7 +3656,7 @@ input[type="submit"].btn.btn-mini {
 
 .nav-list {
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 5px;
   margin-bottom: 0;
 }
 
@@ -5576,7 +5576,7 @@ a.badge:hover {
 }
 
 .hero-unit {
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 30px;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;

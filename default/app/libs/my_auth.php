@@ -25,27 +25,16 @@
 class MyAuth
 {
 
-    /**
-     * Namespace de las cookies y el hash de clave que se va a encriptar
-     * Recordar que si se cambian, se deben actualizar las claves en la bd.
-     */ 
-    protected static $_clave_sesion = 'backend_kumbiaphp';
+    protected static $_clave_sesion = PUBLIC_PATH;
 
-    /**
-     * Realiza el proceso de autenticación de un usuario en el sistema.
-     * @param  string  $user      
-     * @param  string  $pass      
-     * @param  boolean $encriptar 
-     * @return boolean             
-     */
     public static function autenticar($user, $pass, $encriptar = TRUE)
-    {
-        $pass = $encriptar ? self::hash($pass) : $pass;
-        $auth = new Auth('class: usuarios',
-                        'login: ' . $user,
-                        'clave: ' . $pass,
-                        "activo: 1");
+    {        
+        Session::set(self::$_clave_sesion . '_sesion_activa', false);
+        //$pass = $encriptar ? self::hash($pass) : $pass;
+
+        $auth = new Auth("model", "class: proveedores", "identificacion: $user", "contrasena: $pass");
         if ($auth->authenticate()) {
+            Session::set(self::$_clave_sesion . '_sesion_activa', true);
             if (Input::post('recordar')) {
                 self::setCookies($user, $pass);
             } else {
@@ -55,68 +44,36 @@ class MyAuth
         return self::es_valido();
     }
 
-    /**
-     * Verifica que un usuario haya iniciado sesion en la app.
-     * 
-     * @return boolean
-     */
     public static function es_valido()
     {
-        return Auth::is_valid();
+        return Session::get(self::$_clave_sesion . '_sesion_activa');
     }
 
-    /**
-     * Cierra la sesion de un usuario en la app.
-     * 
-     */
     public static function cerrar_sesion()
     {
         Auth::destroy_identity();
+        Session::delete(self::$_clave_sesion . '_sesion_activa');
         self::deleteCookies();
     }
 
-    /**
-     * Crea una encriptacion de la clave para el usuario.
-     * 
-     * Usada para la verificación al loguear y cuando se crea un user en la bd.
-     * 
-     * @param  string $pass 
-     * @return string       
-     */
     public static function hash($pass)
     {
         return crypt($pass, self::$_clave_sesion);
     }
 
-    /**
-     * Verfica si existen cookies para un usuario.
-     * 
-     * @return boolean
-     */
     public static function cookiesActivas()
     {
         return isset($_COOKIE[md5(self::$_clave_sesion)]) && is_array(self::getCookies());
     }
 
-    /**
-     * Establece las cookies para un user.
-     * 
-     * @param string $user 
-     * @param string $pass 
-     */     
     public static function setCookies($user, $pass)
     {
         setcookie(md5(self::$_clave_sesion), serialize(array(
-                    'login' => $user,
-                    'clave' => $pass
+                    'identificacion' => $user,//login
+                    'contrasena' => $pass//clave
                 )), time() + 60 * 60 * 24 * 30);
     }
 
-    /**
-     * Obtiene las cookies de un usuario.
-     * 
-     * @return array|NULL
-     */
     public static function getCookies()
     {
         if (isset($_COOKIE[md5(self::$_clave_sesion)])) {
@@ -126,9 +83,6 @@ class MyAuth
         }
     }
 
-    /**
-     * Elimina los cookies que un usuario tenga guardadas.
-     */
     public static function deleteCookies()
     {
         setcookie(md5(self::$_clave_sesion),'',time()- 1);
@@ -136,4 +90,3 @@ class MyAuth
     }
 
 }
-

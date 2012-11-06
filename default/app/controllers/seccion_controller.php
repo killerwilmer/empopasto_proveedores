@@ -11,7 +11,7 @@
  * @author Admin
  */
 class SeccionController extends ScaffoldController {
-    public $model = 'Seccion';
+    public $model = 'seccion';
 }
 
 ?>

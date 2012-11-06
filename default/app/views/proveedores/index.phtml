@@ -6,8 +6,8 @@
 <?php
 View::partial('backend/barra_superior_listas', FALSE, array('texto' => 'Crear Usuario', 'opciones' => FALSE));
 $dt = new DataTable($proveedores);
-$dt->addHeaders('id', 'Identificacion', 'Nombre Completo', 'Editar');
-$dt->addFields('id', 'identificacion', 'nombcomp');
-$dt->imgLink('figuras/editar.png', 'admin/usuarios/editar');
+$dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social','Nombres', 'Apellidos' ,'Direccion', 'Celular', 'Editar');
+$dt->addFields('id', 'identificacion', 'razonsocial', 'nombres', 'apellidos', 'direccion', 'celular');
+$dt->imgLink('figuras/editar.png', 'proveedores/editar');
 echo $dt->render('class="table table-bordered table-striped"');
 ?>

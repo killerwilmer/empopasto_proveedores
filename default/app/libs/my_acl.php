@@ -54,13 +54,13 @@ class MyAcl
         self::$_acl = Acl2::factory();
 
         //obtenemos todos los roles del usuario actual
-        $user = Load::model('usuarios')->find_first(Auth::get('id'));
+        $user = Load::model('proveedores')->find_first(Auth::get('id'));
 
-        $roles_id = $this->_establecerRoles($user->getRoles());
+        //$roles_id = $this->_establecerRoles($user->getRoles());
 
-        $this->_establecerTemplate($user->id, $user->obtenerPlantilla($roles_id));
+        //$this->_establecerTemplate($user->id, $user->obtenerPlantilla($roles_id));
 
-        self::$_acl->user(Auth::get('id'), $roles_id);
+        //self::$_acl->user(Auth::get('id'));
     }
 
     /**
