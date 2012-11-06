@@ -9,56 +9,49 @@
 <div class="tabbable"> 
     <ul class="nav nav-tabs">
         <li class="active"><a href="#tab1" data-toggle="tab">Datos personales</a></li>
-        <li><a href="#tab2" data-toggle="tab">Actividades economicas</a></li>
+        <li><a href="#tab2" data-toggle="tab">Datos profecionales</a></li>
+        <li><a href="#tab3" data-toggle="tab">Datos comerciales</a></li>
+        <li><a href="#tab4" data-toggle="tab">Actividades economicas</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="tab1">
 
-            <table class="table table-bordered">
-                <tr>
-                    <td style="width: 50%">Tipo identificación: <? echo Form::dbSelect('proveedores.tipo_identificacion_id', 'nombre'); ?><!-- modelo . campo relacionado --></td>
-                    <td style="width: 50%"><div> <?php echo Form::text('proveedores.identificacion', 'class="input-large" placeholder="Identificación persona" title="Se necesita una identificación" required') ?></div></td>
-                </tr>
-                <tr>
-                    <td><div> <?php echo Form::text('proveedores.razonsocial', 'class="input-large" placeholder="Nombre o razón social" title="Se necesita el nombre o razón social" required') ?></div></td>
-                    <td>Ciudad: <? echo Form::dbSelect('proveedores.ciudad_id', 'nombre'); ?><!-- modelo . campo relacionado --></td>
-                </tr>
-                <tr>
-                    <td><div> <?php echo Form::text('proveedores.nombres', 'class="input-large" placeholder="Nombres" title="Se necesitan los nombres" required') ?></div></td>
-                    <td><div> <?php echo Form::text('proveedores.apellidos', 'class="input-large" placeholder="Apellidos" title="Se necesitan los apellidos" required') ?></div></td>
-                </tr>
-                <tr>
-                    <td><div> <?php echo Form::text('proveedores.direccion', 'class="input-large" placeholder="Dirección"') ?></div></td>
-                    <td><div> <?php echo Form::text('proveedores.celular', 'class="input-large" placeholder="Celular"') ?></div></td>
-                </tr>
-                <tr>
-                    <td><div> <?php echo Form::text('proveedores.email', 'class="input-large" placeholder="Email"') ?></div></td>
-                    <td><div> <?php echo Form::text('proveedores.telefono', 'class="input-large" placeholder="Telefono fijo"') ?></div></td>
-                </tr>
-                <tr>
-                    <td><div> <?php echo Form::text('proveedores.fax', 'class="input-large" placeholder="Fax"') ?></div></td>
-                    <td><div> <?php echo Form::pass('proveedores.contrasena', 'class="input-large" placeholder="Contraseña"') ?></div></td>
-                </tr>
-                <tr>
-                    <td><div> <?php echo Form::text('proveedores.profesion', 'class="input-large" placeholder="Profesión"') ?></div></td>
-                    <td><div> <?php echo Form::text('proveedores.tarjeta', 'class="input-large" placeholder="Tarjeta Profecional"') ?></div></td>
-                </tr>
-                <tr>
-                    <td><div> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"') ?></div></td>
-                    <td><div>Formación Académica persona natural.</div>
-                        <div><?php echo Form::textarea("proveedores.educaion", "class='input-xlarge' placeholder='Escriba aquí'") ?></div></td>
-                </tr>
-                <tr>
-                    <td><div>Fecha de Matrícula Camara de Comercio: <?php echo Form::date('proveedores.camcomfecini', 'class="input-large" placeholder="Día/Mes/Año"') ?></div></td>
-                    <td><div>Fecha de Vencimiento Camara de Comercio: <?php echo Form::date('proveedores.camcomfecfin', 'class="input-large" placeholder="Día/Mes/Año"') ?></div></td>
-                </tr>
-                <tr>
-                    <td>Tipo entidad: <? echo Form::dbSelect('proveedores.tipo_entidad_id', 'nombre'); ?><!-- modelo . campo relacionado --></td>
-                    <td>Tipo proveedor: <? echo Form::dbSelect('proveedores.tipo_proveedor_id', 'nombre'); ?><!-- modelo . campo relacionado --></td>                    
-                </tr>                
-            </table>
+            Tipo identificación: <? echo Form::dbSelect('proveedores.tipo_identificacion_id', 'nombre'); ?><!-- modelo . campo relacionado -->
+            <div> <?php echo Form::text('proveedores.identificacion', 'class="input-large" placeholder="Identificación persona" title="Se necesita una identificación" required') ?></div>
+
+            <div> <?php echo Form::text('proveedores.nombres', 'class="input-large" placeholder="Nombres" title="Se necesitan los nombres" required') ?></div>
+            <div> <?php echo Form::text('proveedores.apellidos', 'class="input-large" placeholder="Apellidos" title="Se necesitan los apellidos" required') ?></div>
+
+
+            <div> <?php echo Form::text('proveedores.direccion', 'class="input-large" placeholder="Dirección"') ?></div>
+            <div> <?php echo Form::text('proveedores.celular', 'class="input-large" placeholder="Celular"') ?></div>
+
+
+            <div> <?php echo Form::text('proveedores.email', 'class="input-large" placeholder="Email"') ?></div>
+            <div> <?php echo Form::text('proveedores.telefono', 'class="input-large" placeholder="Telefono fijo"') ?></div>
+
+            <div> <?php echo Form::text('proveedores.fax', 'class="input-large" placeholder="Fax"') ?></div>
+            Ciudad: <? echo Form::dbSelect('proveedores.ciudad_id', 'nombre'); ?><!-- modelo . campo relacionado -->
+            <div> <?php echo Form::pass('proveedores.contrasena', 'class="input-large" placeholder="Contraseña"') ?></div>
+
+
         </div>
         <div class="tab-pane" id="tab2">
+            <div> <?php echo Form::text('proveedores.profesion', 'class="input-large" placeholder="Profesión"') ?></div>
+            <div> <?php echo Form::text('proveedores.tarjeta', 'class="input-large" placeholder="Tarjeta Profecional"') ?></div>
+            <div>Formación Académica persona natural.</div>
+            <div><?php echo Form::textarea("proveedores.educaion", "class='input-xlarge' placeholder='Escriba aquí'") ?></div>
+        </div>
+        <div class="tab-pane" id="tab3">
+            <div> <?php echo Form::text('proveedores.razonsocial', 'class="input-large" placeholder="Nombre o razón social" title="Se necesita el nombre o razón social" required') ?></div>
+            
+            <div> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"') ?></div>
+            <div>Fecha de Matrícula Camara de Comercio: <?php echo Form::date('proveedores.camcomfecini', 'class="input-large" placeholder="Día/Mes/Año"') ?></div>
+            <div>Fecha de Vencimiento Camara de Comercio: <?php echo Form::date('proveedores.camcomfecfin', 'class="input-large" placeholder="Día/Mes/Año"') ?></div>
+            <div>Tipo entidad: <? echo Form::dbSelect('proveedores.tipo_entidad_id', 'nombre'); ?></div><!-- modelo . campo relacionado -->
+            <div>Tipo proveedor: <? echo Form::dbSelect('proveedores.tipo_proveedor_id', 'nombre'); ?></div><!-- modelo . campo relacionado -->
+        </div>
+        <div class="tab-pane" id="tab4">
             <div> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"') ?></div>
         </div>
     </div>
