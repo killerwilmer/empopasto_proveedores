@@ -1,7 +1,7 @@
 <div class="page-header">
     <h3>
-        Edición del Usuario
-        <small><?php eh(strtoupper($proveedor->nombres . " " . $proveedor->apellidos))?></small>
+        Edición de Seciones.
+        <small><?php eh(strtoupper($seccion->nombres))?></small>
     </h3>
 </div>
 <div class="row">
@@ -11,12 +11,9 @@
     <div class="span8 span-derecho">
         <div id="res-form-ajax"><?php View::content() ?></div>
         <?php echo Ajax::form('res-form-ajax', NULL, 'form-horizontal') ?>
-        <?php echo Form::hidden('proveedor.id') ?>
-        <?php echo Form::text('proveedor.identificacion') ?>
-        <?php echo Form::dbSelect('proveedores.tipo_identificacion_id',NULL,NULL,NULL,NULL,'proveedor.tipo_identificacion_id'); ?><!-- modelo . campo relacionado -->
-        
-        <?php echo Form::text('proveedor.nombres') ?>
-        <?php echo Form::text('proveedor.apellidos') ?>
+        <?php echo Form::hidden('seccion.id') ?>
+        <?php echo Form::label('Nombre: ', 'nombre') ?>
+        <?php echo Form::text('seccion.nombre','size="100"',NULL) ?>
 
         <div class="form-actions">
             <?php echo Form::submit('Guardar Datos', 'class="btn btn-primary"') ?>

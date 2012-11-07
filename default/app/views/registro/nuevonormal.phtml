@@ -44,7 +44,7 @@
         </div>
         <div class="tab-pane" id="tab3">
             <div> <?php echo Form::text('proveedores.razonsocial', 'class="input-large" placeholder="Nombre o razón social" title="Se necesita el nombre o razón social" required') ?></div>
-            
+
             <div> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"') ?></div>
             <div>Fecha de Matrícula Camara de Comercio: <?php echo Form::date('proveedores.camcomfecini', 'class="input-large" placeholder="Día/Mes/Año"') ?></div>
             <div>Fecha de Vencimiento Camara de Comercio: <?php echo Form::date('proveedores.camcomfecfin', 'class="input-large" placeholder="Día/Mes/Año"') ?></div>
@@ -52,7 +52,41 @@
             <div>Tipo proveedor: <? echo Form::dbSelect('proveedores.tipo_proveedor_id', 'nombre'); ?></div><!-- modelo . campo relacionado -->
         </div>
         <div class="tab-pane" id="tab4">
-            <div> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"') ?></div>
+            <div>
+                <ol>
+                    <li>
+                        <label>Secciones</label>
+                        <?php echo Form::dbSelect('clientes.seccion_id', 'nombre'); ?>
+                    </li>
+                    <li>
+                        <label>Divisiones</label>
+                        <div id='div_comunas'></div>
+                    </li>
+                    <li>
+                        <label>Actividades</label>
+                        <div id='div_ciudades'></div>
+                    </li>
+                    <li>
+                        <label>&nbsp;</label>
+                        <?php echo Form::submit('Agregar'); ?>
+                    </li>
+                </ol>
+
+                <script type='text/javascript'>
+                    $("#clientes_regiones_id").change(function(){
+                        var regiones_id = $('#clientes_regiones_id').val();
+                        $.ajax({
+                            type: "POST",
+                            url: "<?php echo PUBLIC_PATH . 'clientes/getComunas/'; ?>",
+                            data: "regiones_id=" + regiones_id,
+                            success: function(html){
+                                $("#div_comunas").html(html);
+                                $("#div_ciudades").html(html);
+                            }
+                        });
+                    });
+                </script>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,19 @@
+<?php
+        //echo Form::dbSelect('clientes.comunas_id', 'nombre');
+        //echo Form::dbSelect("clientes.comunas_id", $comunas, 'nombre', '- Seleccione -');
+        //echo Form::dbSelect('clientes.comunas_id','nombre',NULL,NULL,NULL,NULL); <!-- modelo . campo relacionado -->
+        echo Form::dbSelect('clientes.comunas_id','nombre',array('comunas','buscar',$comunas)); ?>
+
+<script type='text/javascript'>
+    $("#clientes_comunas_id").change(function(){
+        var comunas_id 	=	$('#clientes_comunas_id').val();
+        $.ajax({
+            type: "POST",
+            url: "<?php echo PUBLIC_PATH . 'clientes/getCiudades/'; ?>",
+            data: "comunas_id=" + comunas_id,
+            success: function(html){
+                $("#div_ciudades").html(html);
+            }
+        });
+    });
+</script>

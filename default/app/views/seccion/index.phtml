@@ -1,0 +1,14 @@
+<legend>Secciones Registradas.</legend>
+
+<div id="mensajes_flash" >        
+    <?php View::content() ?>
+</div> 
+<?php
+View::partial('backend/barra_superior_listas', FALSE, array('texto' => 'Crear Seccion', 'opciones' => FALSE));
+$dt = new DataTable($seccion);
+$dt->addHeaders('id', 'Nombre', 'Editar', 'Eliminar');
+$dt->addFields('id', 'nombre');
+$dt->imgLink('figuras/editar.png', 'seccion/editar');
+$dt->imgLinkConfirm('figuras/eliminar.png', 'seccion/eliminar', '', '¿Realmente desea Eliminar Esta Seccion?'); 
+echo $dt->render('class="table table-bordered table-striped"');
+?>
