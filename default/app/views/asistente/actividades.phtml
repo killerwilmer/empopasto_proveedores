@@ -1,0 +1,43 @@
+<br>
+<br>
+<br>
+<? echo Form::open() ?>
+<div><? echo View::content() ?></div>
+
+<div><legend>Registro de proveedores para Empopasto S.A</legend>
+</div>
+<div><? echo Html::link("asistente/editar/","Volver a mis datos", "class='btn btn-danger'") ?></div>
+
+<br>
+<div class="tabbable"> 
+
+    <div class="tab-content">
+        <!-- PESTANA PERSONAL-->
+        <div class="tab-pane active" id="tab1">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span2">
+                        <? echo Html::img("empopasto/actividades.png") ?>
+                    </div>
+                    <div class="span10">
+                        
+                        <div>
+                            <?echo Form::label("Sección:", "seccion")?>
+                            <?echo Form::dbSelect('seccion.seccion_id', 'nombre'); ?>
+                            <?echo Form::label("División:", "division")?>
+                            <div id='div_division'></div>
+                            <?echo Form::label("Actividad:", "actividad")?>
+                            <div id='div_actividad'></div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--FIN PESTANA PERSONAL-->
+    </div>
+</div>
+
+<?php echo Form::close() ?>

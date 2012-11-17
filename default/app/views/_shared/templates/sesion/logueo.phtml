@@ -14,14 +14,18 @@
         echo Tag::js('bootstrap/bootstrap');
         echo Tag::js('global');
         ?>
+
     </head>
     <body>
-        <?php View::partial('index/cabecera') ?>
+        <?php View::partial('backend/cabecera_app') ?>
         <div class="container">
             <div id="contenido" class="content">
-                <?php View::content(); ?>
+
+                <?php View::content() ?>
+
             </div>
-            <?php View::partial('backend/pie') ?>
         </div>
-    </body>
+    </div>
+
+</body>
 </html>
