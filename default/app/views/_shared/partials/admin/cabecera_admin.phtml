@@ -10,12 +10,12 @@
 
             <div class="nav-collapse">
                 <ul class="nav">
-                    <li class="active"><a href="/acreditacion_ponderacion/">Proovedores</a></li>
+                    <li class="active"><? echo Html::link("admin/proveedores", "Proveedores") ?></li>
                     <li class="dropdown">
-                        <? echo Html::link("usuarios/registrar", "Contratos") ?>
+                        <? echo Html::link("admin/contratos", "Contratos") ?>
                     </li>
                     <li class="dropdown">
-                        <? echo Html::link("usuarios/logeo", "Datos Plataforma") ?>
+                        <? echo Html::link("admin/datos", "Datos Plataforma") ?>
                     </li>
                 </ul>
                 <ul class="nav pull-right">

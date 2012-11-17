@@ -24,7 +24,7 @@ class SesionController extends AppController {
                 $usu = new Proveedores();
                 $usu->find_first("identificacion='$login' and clave='$clave'");
                 if($usu->tipousuario_id==1){//admin
-                    Router::redirect("proveedores/nuevoadmin");
+                    Router::redirect("admin/index");
                 }
                 else if($usu->tipousuario_id==2){//proveedor
                     Session::set("idproveedor", $usu->id);

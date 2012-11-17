@@ -6,11 +6,11 @@
  */
 
 /**
- * Description of proyecto
+ * Description of contratos
  *
  * @author wilmerarteaga
  */
-class Proyecto extends ActiveRecord {
+class Contratos extends ActiveRecord {
     //put your code here
 }
 
