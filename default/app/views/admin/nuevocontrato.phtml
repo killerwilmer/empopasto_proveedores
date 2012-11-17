@@ -1,1 +1,28 @@
 <legend>Nuevo Contrato.</legend>
+<?php echo Form::open(); ?>
+
+<div> <? echo Form::label("Numero del contrato", "contratos.numero") ?>
+    <? echo Form::text("contratos.numero", "class='input-large' placeholder='Numero del contrato'") ?></div>
+
+<div> <? echo Form::label("Objeto del contrato", "contratos.objeto") ?>
+    <? echo Form::text("contratos.objeto", "class='input-large' placeholder='Objeto del contrato'") ?></div>
+
+<div> <? echo Form::label("Valor inicial", "contratos.valorini") ?>
+    <? echo Form::text("contratos.valorini", "class='input-large' placeholder='Valor inicial'") ?></div>
+
+<div> <? echo Form::label("Fecha de suscripción", "contratos.fechaini") ?>
+    <? echo Form::date("contratos.fechaini", "class='input-large' placeholder='Día/Mes/Año'") ?></div>
+
+<div> <? echo Form::label("Fecha de terminación", "contratos.fechafin") ?>
+    <? echo Form::date("contratos.fechafinal", "class='input-large' placeholder='Día/Mes/Año'") ?></div>
+
+<div> <? echo Form::label("Puntaje", "contratos.puntaje") ?>
+    <? echo Form::text("contratos.puntaje", "class='input-large' placeholder='Puntaje'") ?></div>
+
+<div> <? echo Form::label("Proveedor", "contratos.proveedor_id") ?>
+    <? echo Form::text("contratos.proveedores_id", "class='input-large' placeholder='Proveedor'") ?></div>
+
+<? echo Form::submit("Guardar", "class='btn btn-primary'") ?>
+
+<?php echo Form::close(); ?>
+<div><? echo View::content() ?></div>

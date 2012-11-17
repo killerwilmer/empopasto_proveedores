@@ -1,6 +1,7 @@
+<div><? echo View::content() ?></div>
 <div class="page-header">
     <h3>Contratos</h3>
-    <?echo Html::link("admin/nuevocontrato","Nuevo contrato","class='btn btn-primary'")?>
+    <? echo Html::link("admin/nuevocontrato", "Nuevo contrato", "class='btn btn-primary'") ?>
 </div>
 <div class="span10">
     <table class="table table-bordered table-striped">
@@ -8,29 +9,35 @@
                 <th>NUMERO</th>
                 <th>OBJETO</th>
                 <th>VALOR INICIAL</th>
-                <th>FECHA INICIO</th>
-                <th>FECHA FINAL</th>
+                <th>CEDULA / NIT</th>
+                <th>NOMBRE</th>
+                <th>FECHA SUSCRIPSION</th>
+                <th>FECHA TERMINACION</th>
                 <th>PUNTAJE</th>
-                <th>PROVEEDOR</th>
                 <th>ACCIONES</th>
             </tr></thead>   
 
         <tbody>
             <? foreach ($contratos as $obj) { ?>
+                <?php
+                $prov = new Proveedores();
+                $prov->find_first("id=$obj->proveedores_id");
+                ?>
                 <tr>
                     <td><? echo $obj->numero ?></td>
                     <td><? echo $obj->objeto ?></td>
                     <td><? echo $obj->valorini ?></td>
+                    <td><? echo $prov->identificacion ?></td>
+                    <td><? echo $prov->nombres ?></td>
                     <td><? echo $obj->fechaini ?></td>
                     <td><? echo $obj->fechafinal ?></td>
-                    <td><? echo $obj->puntaje ?></td>
-                    <td><? echo $obj->proveedor_id ?></td>
-                    <td><? echo Html::linkAction("modificar/$obj->id", "MOD") ?></td>
+                    <td><? echo $obj->puntaje ?></td>                    
+                    <td><? echo Html::linkAction("editarcontrato/$obj->id", "Mod") ?></td>
                     <td>
-                        <? echo Html::linkAction("eliminar/$obj->id", "Eliminar") ?>
+    <? echo Html::linkAction("eliminar/$obj->id", "Eli") ?>
                     </td>
                 </tr>
-            <? } ?> 
+<? } ?> 
         </tbody>
     </table> 
 </div>
