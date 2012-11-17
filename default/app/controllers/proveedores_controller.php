@@ -11,6 +11,7 @@
  * @author wilmerarteaga
  */
 Load::models('proveedores');
+View::template('admin/admin');
 
 class ProveedoresController extends ApplicationController {
 

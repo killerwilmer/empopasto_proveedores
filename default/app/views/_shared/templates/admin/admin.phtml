@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Registro de proveedores y proponentes.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+      
+        <? Tag::css('bootstrap/bootstrap.min'); ?>
+        <? Tag::css('bootstrap/bootstrap-responsive.min'); ?>
+        <? Tag::css('bootstrap/estilos'); ?>
+        <? Tag::css('jqueryui/themes/custom-theme/jquery.ui.all') ?>
+        <? echo Html::includeCss() ?>
+
+        <? echo Tag::js('jquery/jquery-1.7.1.min') ?>
+        <? echo Tag::js('jquery/ui/jquery.ui.core') ?>
+        <? echo Tag::js('jquery/ui/jquery.ui.widget') ?>
+        <? echo Tag::js('jquery/ui/jquery.ui.accordion') ?>
+        <? echo Tag::js('jquery/jquery.kumbiaphp'); ?>
+        <? echo Tag::js('bootstrap/bootstrap.min'); ?>
+        <? echo Tag::js('global'); ?>
+        
+        
+    </head>
+    <body>
+    <?echo View::partial("admin/cabecera_admin")?>
+    <div class="container">
+    <div id="contenido" class="content">
+        <?echo View::content()?>
+        </div></div>
+       
+    </body>
+</html>
