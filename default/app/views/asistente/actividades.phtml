@@ -25,12 +25,14 @@
                             <?echo Form::label("Sección:", "seccion")?>
                             <?echo Form::dbSelect('seccion.seccion_id', 'nombre'); ?>
                             <?echo Form::label("División:", "division")?>
-                            <div id='div_division'></div>
+                            <div id='div_division'>
+                                <select id="division_division_id" name="division[division_id]"><option value="">Seleccione</option></select>
+                            </div>
                             <?echo Form::label("Actividad:", "actividad")?>
-                            <div id='div_actividad'></div>
+                            <div id='div_actividad'>
+                                <select id="actividad_actividad_id"name="actividad_actividad_id"><option value="">Seleccione</option></select>
+                            </div>
                         </div>
-                       
-
                     </div>
                 </div>
             </div>
@@ -41,3 +43,21 @@
 </div>
 
 <?php echo Form::close() ?>
+
+
+<script type='text/javascript'>
+    $("#seccion_seccion_id").change(function(){
+        var seccion_id = $('#seccion_seccion_id').val();
+        $.ajax({
+            type: "POST",
+            url: "<?php echo PUBLIC_PATH . 'asistente/getDivisiones/'; ?>",
+            data: "seccion_id=" + seccion_id,
+            success: function(html){
+                $("#div_division").html(html);
+                
+                
+            }
+        });
+    });
+</script>
+

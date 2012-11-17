@@ -1,0 +1,21 @@
+<?
+        echo Form::dbSelect('division.division_id','nombre',array('division','buscar',$seccion_id));
+?>
+
+<script type='text/javascript'>
+    $("#division_division_id").change(function(){
+         
+        var division_id = $('#division_division_id').val();
+       
+        $.ajax({
+            type: "POST",
+            url: "<?php echo PUBLIC_PATH . 'asistente/getActividades/'; ?>",
+            data: "division_id=" + division_id,
+            success: function(html){
+                $("#div_actividad").html(html);
+                
+                
+            }
+        });
+    });
+</script>
