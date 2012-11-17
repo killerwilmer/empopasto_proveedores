@@ -71,20 +71,64 @@ class AsistenteController extends AppController {
 
     function actividades() {
         View::template("asistente/default_ribbon");
+        Load::model("actividad_has_proveedores");
+
+        $idproveedor = Session::get("idproveedor");
+        $ap = new ActividadHasProveedores();
+        $this->actividades = array();
+        $this->actividades = $ap->find("proveedores_id=$idproveedor");
+
+        if (Input::hasPost("actividad")) {
+            $in = Input::post("actividad");
+            $idactividad = $in["actividad_id"];
+            $idproveedor = Session::get("idproveedor");
+
+            $ap = new ActividadHasProveedores();
+
+
+            if ( $ap->count("actividad_id=$idactividad and proveedores_id=$idproveedor")==0) {
+                $ap->actividad_id = $idactividad;
+                $ap->proveedores_id = $idproveedor;
+                if ($ap->save()) {
+                    Flash::success("Actividad agregada correctamente");
+                    Router::redirect("asistente/actividades");
+                } else {
+                    Flash::error("Error agregando actividad");
+                }
+            }
+            else{
+                Flash::notice("La actividad seleccionada ya existe");
+            }
+        }
+    }
+    
+    function eliminar($idactividad){
+         $idproveedor = Session::get("idproveedor");
+         Load::model("actividad_has_proveedores");
+         $ap = new ActividadHasProveedores();
+         if($ap->delete("actividad_id=$idactividad and proveedores_id=$idproveedor")){
+             Flash::success("Se eliminó la actividad correctamente");
+             Router::redirect("asistente/actividades");
+         }
+         else{
+             Flash::error("Se eliminó la actividad correctamente");
+             Router::redirect("asistente/actividades");
+         }
+         
     }
 
     //ajax actividades
     public function getDivisiones() {
         View::response('view');
         Load::model("division");
-        $division = new Division();        
+        $division = new Division();
         $this->seccion_id = Input::post('seccion_id');
     }
 
     public function getActividades() {
         View::response('view');
         Load::model("actividad");
-        $actividad = new Actividad();        
+        $actividad = new Actividad();
         $this->division_id = Input::post('division_id');
     }
 
