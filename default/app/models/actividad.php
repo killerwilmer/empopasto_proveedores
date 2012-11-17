@@ -12,6 +12,9 @@
  */
 class Actividad extends ActiveRecord {
     //put your code here
+    public function buscar($division_id) {
+        return $this->find("division_id = $division_id", 'order: nombre');
+    }
 }
 
 ?>

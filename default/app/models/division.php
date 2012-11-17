@@ -12,6 +12,9 @@
  */
 class Division extends ActiveRecord {
     //put your code here
+     public function buscar($seccion_id) {
+        return $this->find("seccion_id = $seccion_id", 'order: nombre');
+    }
 }
 
 ?>
