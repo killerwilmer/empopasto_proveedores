@@ -12,6 +12,7 @@
  */
 class ActividadController extends ScaffoldController {
     public $model = 'actividad';
+     //public $logger = true;
 }
 
 ?>

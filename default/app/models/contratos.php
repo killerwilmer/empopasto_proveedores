@@ -12,6 +12,9 @@
  */
 class Contratos extends ActiveRecord {
     //put your code here
+    public function paginar($pagina = 1,$idproveedor) {
+        return $this->paginate("page: $pagina","proveedores_id=$idproveedor","per_page: 10","order: fechafinal desc");
+    }
 }
 
 ?>

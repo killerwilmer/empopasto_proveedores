@@ -1,0 +1,51 @@
+<br>
+<br>
+<br>
+
+<div><? echo View::content() ?></div>
+
+<div><legend>Registro de proveedores para Empopasto S.A</legend>
+</div>
+<div><? echo Html::link("asistente/editar/", "Volver a mis datos", "class='btn btn-danger'") ?></div>
+
+<br>
+<div class="tabbable"> 
+
+    <div class="tab-content">
+        <!-- PESTANA PERSONAL-->
+        <div class="tab-pane active" id="tab1">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span2">
+                        <? echo Html::img("empopasto/contrato.png") ?>
+                    </div>
+                    <div class="span10">
+                        <legend>Contratos registrados</legend>
+
+                        <div id="mensajes_flash" >        
+                            <?php View::content() ?>
+                        </div> 
+                        <?php
+
+                        $dt = new DataTable($contrato);
+                        $dt->addFields('id', 'numero', 'objeto', 'valorini', 'fechaini', 'fechafinal', 'puntaje');
+                        $dt->addHeaders('id', 'Código', 'Objeto', 'Valor inicial', 'Fecha inicial', 'Fecha final', 'Puntaje');
+                        //$dt->imgLink('figuras/editar.png', 'contratos/editar');
+                        //$dt->imgLinkConfirm('figuras/eliminar.png', 'proveedores/eliminar', '', '¿Está seguro?');
+                        echo $dt->render('class="table table-bordered table-striped"');
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

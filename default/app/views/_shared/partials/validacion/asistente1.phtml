@@ -1,0 +1,107 @@
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+        if ($("[rel=tooltip]").length) {
+            $("[rel=tooltip]").tooltip();
+        }
+        
+        $('#formulario').validate(
+        {
+            rules:{
+                'proveedores[identificacion]':{
+                    minlength:2,
+                    maxlength:20,
+                    required:true,
+                    number:true
+                },
+                'proveedores[nombres]':{
+                    minlength:2,
+                    maxlength:100,
+                    required:true
+                },
+                'proveedores[apellidos]':{
+                    minlength:2,
+                    maxlength:100,
+                    required:true
+                },
+                'proveedores[direccion]':{
+                    minlength:2,
+                    maxlength:200,
+                    required:true
+                },
+                'proveedores[celular]':{
+                    minlength:2,
+                    maxlength:20,                    
+                    required:true,
+                    number:true
+                },
+                'proveedores[email]':{
+                    minlength:2,
+                    maxlength:40,                    
+                    required:true,
+                    email:true
+                },
+                'proveedores[telefono]':{
+                    minlength:2,
+                    maxlength:20,                    
+                    required:true,
+                    number:true
+                },
+                'proveedores[fax]':{
+                    minlength:2,
+                    maxlength:20,                    
+                    required:true,
+                    number:true
+                },
+                'proveedores[clave]':{
+                    minlength:2,
+                    maxlength:20,                    
+                    required:true                    
+                },
+                'proveedores[profesion]':{
+                    minlength:2,
+                    maxlength:100,                    
+                    required:true                    
+                },
+                'proveedores[tarjeta]':{
+                    minlength:2,
+                    maxlength:30,                    
+                    required:true,
+                    number:true
+                },
+                'proveedores[educacion]':{
+                    minlength:2,
+                    maxlength:100,                    
+                    required:true                   
+                },
+                'proveedores[razonsocial]':{
+                    minlength:2,
+                    maxlength:100,                    
+                    required:true                   
+                },
+                'proveedores[rut]':{
+                    minlength:2,
+                    maxlength:30,                    
+                    required:true                   
+                },
+                'proveedores[portafolio]':{
+                    minlength:2,
+                    maxlength:150,                    
+                    required:true                   
+                }
+                
+            },
+            highlight: function(label) {
+                $(label).closest('.control-group').addClass('error');
+            },
+            success: function(label) {
+                label
+                .text('Perfecto!').addClass('valid')
+                .closest('.control-group').addClass('success');
+            }
+        }
+        
+    )
+    });
+</script>

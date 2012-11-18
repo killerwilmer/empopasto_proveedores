@@ -20,69 +20,70 @@
                         <? echo Html::img("empopasto/actividades.png") ?>
                     </div>
                     <div class="span10">
-                         <? echo Form::open("asistente/actividades", "POST","class='form-inline'") ?>
-                            <table>
-                                <tr>
-                                    <td>
-                                        Sección:
-                                        <div id="div_seccion">
+                        <? echo Form::open("asistente/actividades", "POST", "class='form-inline'") ?>
+                        <table>
+                            <tr>
+                                <td>
+                                    Sección:
+                                    <div id="div_seccion">
                                         <? echo Form::dbSelect('seccion.seccion_id', 'nombre'); ?>
-                                        </div>
-                                    </td>
+                                    </div>
+                                </td>
+                                <td>
+                                    División:
+                                    <div id='div_division'>
+
+                                        <select id="division_division_id" name="division_division_id"><option value="">Seleccione</option></select>
+                                    </div> 
+                                </td>
+                                <td>
+                                    Actividad:
+                                    <div id='div_actividad'>
+                                        <select id="actividad_actividad_id" name="actividad_actividad_id"><option value="">Seleccione</option></select>
+                                    </div>
+                                </td>
+                                <td><div><? echo Form::submit("Agregar", "class='btn btn-danger'") ?></div></td>
+                                <td><? echo Form::close() ?></td>
+                            </tr>
+                        </table>
+                    
+                    <!--TABLA ACTIVIDADES-->
+
+                    <div>
+                        <br>
+                        <h4>Actividades registradas</h4>
+                        <table class="table table-bordered table-striped"">
+                            <thead>
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>ELIMINAR</th>
+                            </thead>
+
+                            <? foreach ($actividades as $obj) { ?>
+                                <tr>
+                                    <td><? echo $obj->id ?></td>
+                                    <td><?
+                            Load::model("actividad");
+                            $actividad = new Actividad();
+                            $actividad->find_first($obj->actividad_id);
+                            echo $actividad->nombre;
+                                ?></td>
                                     <td>
-                                       División:
-                                        <div id='div_division'>
-                                            
-                                            <select id="division_division_id" name="division_division_id"><option value="">Seleccione</option></select>
-                                        </div> 
+                                        <? echo Js::link("asistente/eliminar/$obj->id", "Eliminar", "Está seguro?") ?>
                                     </td>
-                                    <td>
-                                       Actividad:
-                                        <div id='div_actividad'>
-                                            <select id="actividad_actividad_id" name="actividad_actividad_id"><option value="">Seleccione</option></select>
-                                        </div>
-                                    </td>
-                                    <td><div><? echo Form::submit("Agregar", "class='btn btn-danger'") ?></div></td>
-                                    <td><? echo Form::close() ?></td>
                                 </tr>
-                            </table>
-                        </div>
-                        <!--TABLA ACTIVIDADES-->
-                        <div>
-
-                            <table>
-                                <thead>
-                                <th>ID</th>
-                                <th>NOMBRE</th>
-                                <th>ELIMINAR</th>
-                                </thead>
-
-                                <? foreach ($actividades as $obj) { ?>
-                                    <tr>
-                                        <td><? echo $obj->id ?></td>
-                                        <td><? 
-                                            Load::model("actividad");
-                                            $actividad = new Actividad();
-                                            $actividad->find_first($obj->actividad_id);
-                                            echo $actividad->nombre;
-                                        
-                                        ?></td>
-                                        <td>
-                                             <?echo Js::link("asistente/eliminar/$obj->id", "Eliminar", "Está seguro?")?>
-                                        </td>
-                                    </tr>
-                                <? } ?>
-                            </table>
-
-                        </div>
+                            <? } ?>
+                        </table>
 
                     </div>
+</div>
                 </div>
             </div>
-
         </div>
-        <!--FIN PESTANA PERSONAL-->
+
     </div>
+    <!--FIN PESTANA PERSONAL-->
+</div>
 </div>
 
 

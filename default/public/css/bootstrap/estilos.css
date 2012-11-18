@@ -89,3 +89,17 @@ table.table input[type=checkbox], table.table img{
 table td:first-child{
     width: 20px;
 }
+label.valid{
+    width: 24px;
+    height: 24px;
+    background: url('done.png') center center no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+label.error{
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+}

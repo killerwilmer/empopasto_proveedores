@@ -30,7 +30,7 @@ class AsistenteController extends AppController {
             $proveedor->ciudad_id = $tci["ciudad_id"];
             $proveedor->tipo_entidad_id = $ten["tipo_entidad_id"];
             $proveedor->tipo_proveedor_id = $tpr["tipo_proveedor_id"];
-            $proveedor->tipo_user = "2";
+            $proveedor->tipousuario_id = "2";
 
             if ($proveedor->save()) {
                 Flash::success("Creado correctamente");
@@ -97,16 +97,19 @@ class AsistenteController extends AppController {
                 }
             }
             else{
-                Flash::notice("La actividad seleccionada ya existe");
+                Flash::error("La actividad seleccionada ya existe");
             }
         }
     }
     
     function eliminar($idactividad){
+         View::template("asistente/default_ribbon");
          $idproveedor = Session::get("idproveedor");
          Load::model("actividad_has_proveedores");
-         $ap = new ActividadHasProveedores();
-         if($ap->delete("actividad_id=$idactividad and proveedores_id=$idproveedor")){
+         $ap = new ActividadHasProveedores();         
+         $ap->find_first($idactividad);
+         
+         if($ap->delete()){
              Flash::success("Se eliminó la actividad correctamente");
              Router::redirect("asistente/actividades");
          }
@@ -130,6 +133,22 @@ class AsistenteController extends AppController {
         Load::model("actividad");
         $actividad = new Actividad();
         $this->division_id = Input::post('division_id');
+    }
+    
+    //listar contratos del proveedor
+    function contratos($pagina = 1){
+         View::template("asistente/default_ribbon");
+        Load::model("contratos");
+        $idproveedor = Session::get("idproveedor");
+        $this->contrato = array();        
+        
+        try {
+            $obj = new Contratos();
+            $this->contrato = $obj->paginar($pagina,$idproveedor);
+        } catch (KumbiaException $e) {
+            View::excepcion($e);
+        }
+        
     }
 
 }
