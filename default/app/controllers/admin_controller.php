@@ -36,8 +36,20 @@ class AdminController extends ApplicationController {
     }
 
     public function editarcontrato($idcontrato) {
-        $this->obj = new Contratos();
-        $this->obj->find_first($idcontrato);
+        $this->objContrato = new Contratos();
+        $this->objContrato->find_first($idcontrato);
+
+        if (Input::hasPost("contratos")) {
+            $contrato = new Contratos(Input::post("contratos"));
+            $contrato->id = Input::post("idcontrato");
+            if ($contrato->update()) {
+                $this->objContrato = new Contratos();
+                $this->objContrato->find_first($idcontrato);
+                Flash::success("Modificación exitosa");
+            } else {
+                Flash::error("No se puede actualizar..");
+            }
+        }
     }
 
 }
