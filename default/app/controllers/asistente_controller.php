@@ -15,7 +15,16 @@ class AsistenteController extends AppController {
     //put your code here
 
     function asistente1() {//personales
-        View::template("asistente/default");
+        Load::model('proveedores');
+        $idproveedor = Session::get("idproveedor");
+        $usu = new Proveedores();
+        $usu->find_first("id='$idproveedor'");
+        if ($usu->tipousuario_id==2) {
+            View::template('admin/admin');
+        } else {
+            View::template("asistente/default");
+        }
+
         Load::model("proveedores");
         if (Input::hasPost("proveedores")) {
 
@@ -33,25 +42,23 @@ class AsistenteController extends AppController {
             $proveedor->tipousuario_id = "2";
 
             if ($proveedor->save()) {
-                Flash::success("Creado correctamente");
+                Flash::success("Creando correctamente");
                 Router::redirect("asistente/editar");
             }
         }
     }
 
-    function editar($idpro) {
-        
+    function editar($idpro = -1) {
+
         Load::model("proveedores");
-        if ($idpro != "null") {
+        if ($idpro != -1) {
             View::template('admin/admin');
             $idproveedor = $idpro;
-        }
-        else
-        {
+        } else {
             View::template("asistente/default_ribbon");
             $idproveedor = Session::get("idproveedor");
         }
-        
+
         $this->proveedor = new Proveedores();
         $this->proveedor->find_first($idproveedor);
 
@@ -72,7 +79,7 @@ class AsistenteController extends AppController {
 
             if ($proveedor->update()) {
                 Flash::success("Actualizado correctamente");
-                Router::redirect("asistente/editar");
+                Router::redirect("asistente/editar/" . $idpro);
             }
         }
     }
