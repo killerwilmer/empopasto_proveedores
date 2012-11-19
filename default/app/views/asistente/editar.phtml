@@ -100,7 +100,7 @@
                         $fecha = new DateTime($proveedor->camcomfecfin);
                         $fecha_ =  $fecha->format("d/m/Y");
                     ?>
-                    <div><?php echo Form::date('proveedores.camcomfecfin', 'placeholder="Día/Mes/Año"',null,null,"$proveedor->camcomfecfin") ?></div>
+                    <div><? echo Form::date('proveedores.camcomfecfin',null,null,"$proveedor->camcomfecfin") ?></div>
                     <div>Tipo entidad</div>
                     <div> <? echo Form::dbSelect('tipo_entidad.tipo_entidad_id', 'nombre',null,null,null,$proveedor->tipo_entidad_id); ?></div>
                     <div>Tipo proveedor: </div>
