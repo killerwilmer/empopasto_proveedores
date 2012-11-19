@@ -42,6 +42,8 @@ class SesionController extends AppController {
     
     function cerrar(){
         Auth::destroy_identity();
+        Session::delete("idproveedor");
+        Session::delete("idtipoproveedor");
         Router::redirect("sesion/index");
     }
 }
