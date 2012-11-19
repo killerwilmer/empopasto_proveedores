@@ -34,10 +34,10 @@
                     <td><? echo $obj->puntaje ?></td>                    
                     <td><? echo Html::linkAction("editarcontrato/$obj->id", "Mod") ?></td>
                     <td>
-    <? echo Html::linkAction("eliminar/$obj->id", "Eli") ?>
+                        <? echo Html::linkAction("eliminarcontrato/$obj->id", "Eli") ?>
                     </td>
                 </tr>
-<? } ?> 
+            <? } ?> 
         </tbody>
     </table> 
 </div>
