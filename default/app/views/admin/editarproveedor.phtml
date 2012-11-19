@@ -1,0 +1,95 @@
+<br>
+<br>
+<br>
+<? echo Form::open() ?>
+<div><?echo View::content()?></div>
+<div></div>
+<div><legend>Registro de proveedores para Empopasto S.A</legend></div>
+<div class="btn-toolbar">
+<div class="btn-group">
+        <a href='#tab1' data-toggle="tab" class="btn btn-danger">Datos personales</a>
+        <a href='#tab2' data-toggle="tab" class="btn btn-warning">Datos profesionales</a>
+        <a href='#tab3' data-toggle="tab" class="btn btn-inverse">Datos comerciales</a>    
+        <?php echo Form::submit("Grabar", "class='btn btn-success'") ?>
+        
+        
+</div>
+<div class="btn-group">
+    
+     <?echo Html::link("asistente/actividades", "Actividades","class='btn btn-primary'")?>
+     <?echo Html::link("asistente/contratos", "Contratos","class='btn btn-danger'")?>
+</div>
+</div>
+    
+<br>
+<div class="tabbable"> 
+
+    <div class="tab-content">
+        <!-- PESTANA PERSONAL-->
+        <div class="tab-pane active" id="tab1">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span2">
+                        <? echo Html::img("empopasto/infopersonal.jpg") ?>
+                    </div>
+                    <div class="span10">
+                        
+                        <br>
+                        <div><? echo Form::label("Tipo identificación:", "proveedores.tipo_identificacion_id") ?></div>
+                        <? echo Form::dbSelect('tipo_identificacion.tipo_identificacion_id', 'nombre',null,null,null,$proveedor->tipo_identificacion_id); ?><!-- modelo . campo relacionado -->
+                        <div> <? echo Form::text('proveedores.identificacion', 'class="input-large" placeholder="Número de identificación" title="Se necesita una identificación"',$proveedor->identificacion) ?></div>
+                        <div> <? echo Form::text('proveedores.nombres', 'class="input-large" placeholder="Nombres" title="Se necesitan los nombres"',$proveedor->nombres) ?></div>
+                        <div> <? echo Form::text('proveedores.apellidos', 'class="input-large" placeholder="Apellidos" title="Se necesitan los apellidos"',$proveedor->apellidos) ?></div>
+                        <div> <? echo Form::text('proveedores.direccion', 'class="input-large" placeholder="Dirección"',$proveedor->direccion) ?></div>
+                        <div> <? echo Form::text('proveedores.celular', 'class="input-large" placeholder="Celular"',$proveedor->celular) ?></div>
+                        <div> <? echo Form::text('proveedores.email', 'class="input-large" placeholder="Email"',$proveedor->email) ?></div>
+                        <div> <? echo Form::text('proveedores.telefono', 'class="input-large" placeholder="Telefono fijo"',$proveedor->telefono) ?></div>
+                        <div> <? echo Form::text('proveedores.fax', 'class="input-large" placeholder="Fax"',$proveedor->fax) ?></div>
+                        <div><? echo Form::label("Ciudad:", "proveedores.ciudad_id") ?></div>
+                        <? echo Form::dbSelect('ciudad.ciudad_id', 'nombre',null,null,null,$proveedor->ciudad_id); ?><!-- modelo . campo relacionado -->
+                        <div> <? echo Form::pass('proveedores.clave', 'class="input-large" placeholder="Contraseña"',$proveedor->clave) ?></div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--FIN PESTANA PERSONAL-->
+        <div class="tab-pane" id="tab2">
+            <div class="row-fluid">
+                <div class="span2">
+                    <? echo Html::img("empopasto/infoprofesional.jpg") ?>
+                </div>
+                <div class="span10">
+                    
+                    <br>
+                    <div> <?php echo Form::text('proveedores.profesion', 'class="input-large" placeholder="Profesión"',$proveedor->profesion) ?></div>
+                    <div> <?php echo Form::text('proveedores.tarjeta', 'class="input-large" placeholder="Tarjeta Profecional"',$proveedor->tarjeta) ?></div>
+                    <div>Formación Académica persona natural.</div>
+                    <div><?php echo Form::textarea("proveedores.educacion", "class='input-xlarge' placeholder='Escriba aquí'",$proveedor->educacion) ?></div>
+                        
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab3">
+            <div class="row-fluid">
+                <div class="span2">
+                    <? echo Html::img("empopasto/infocomercial.png") ?>
+                </div>
+                <div class="span10">
+                    
+                    <br>
+                    <div> <?php echo Form::text('proveedores.razonsocial', 'class="input-large" placeholder="Nombre o razón social" title="Se necesita el nombre o razón social"',$proveedor->razonsocial) ?></div>
+                    <div> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"',$proveedor->rut) ?></div>
+                    <div>Fecha matrícula de Cámara de Comercio</div>
+                    <div><?php echo Form::date('proveedores.camcomfecfin', 'class="input-large" placeholder="Día/Mes/Año"',null,null,$proveedor->camcomfecfin) ?></div>
+                    <div>Tipo entidad</div>
+                    <div> <? echo Form::dbSelect('tipo_entidad.tipo_entidad_id', 'nombre',null,null,null,$proveedor->tipo_entidad_id); ?></div>
+                    <div>Tipo proveedor: </div>
+                    <div><? echo Form::dbSelect('tipo_proveedor.tipo_proveedor_id', 'nombre',null,null,null,$proveedor->tipo_proveedor_id); ?></div>
+                    <div> <?php echo Form::text('proveedores.portafolio', 'class="input-large" placeholder="Portafolio"',$proveedor->portafolio) ?></div>
+                </div>
+            </div>
+        </div>
+       
+        <?php echo Form::close() ?>

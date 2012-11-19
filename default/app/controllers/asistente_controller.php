@@ -60,7 +60,7 @@ class AsistenteController extends AppController {
             $proveedor->ciudad_id = $tci["ciudad_id"];
             $proveedor->tipo_entidad_id = $ten["tipo_entidad_id"];
             $proveedor->tipo_proveedor_id = $tpr["tipo_proveedor_id"];
-            $proveedor->tipo_user = "2";
+            $proveedor->tipousuario_id = "2";
 
             if ($proveedor->update()) {
                 Flash::success("Actualizado correctamente");

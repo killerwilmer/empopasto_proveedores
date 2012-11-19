@@ -1,0 +1,16 @@
+<legend>Proveedores Registrados.</legend>
+
+<div id="mensajes_flash" >        
+    <?php View::content() ?>
+</div>
+<div class="well" style="padding: 8px;border-radius: 2px;">
+    <? echo Html::link("admin/nuevoproveedor", "Nuevo proveedor", "class='btn btn-primary'") ?>
+</div>
+<?php
+$dt = new DataTable($proveedores);
+$dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social','Nombres', 'Apellidos' ,'Direccion', 'Celular', 'Editar', 'Eliminar');
+$dt->addFields('id', 'identificacion', 'razonsocial', 'nombres', 'apellidos', 'direccion', 'celular');
+$dt->imgLink('figuras/editar.png', 'admin/editarproveedor');
+$dt->imgLinkConfirm('figuras/eliminar.png', 'admin/eliminarproveedor', '', '¿Realmente desea Eliminar Este Proveedor?'); 
+echo $dt->render('class="table table-bordered table-striped"');
+?>
