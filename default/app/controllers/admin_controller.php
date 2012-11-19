@@ -52,6 +52,21 @@ class AdminController extends ApplicationController {
         }
     }
 
+    public function eliminarcontrato($idcontrato) {
+        $this->objContrato = new Contratos();
+        $this->objContrato->find_first($idcontrato);
+
+        if (Input::hasPost("contratos")) {
+            $contrato = new Contratos();
+            $contrato->find_first($idcontrato);
+            if ($contrato->delete()) {
+                $this->redirect("admin/contratos");
+            } else {
+                Flash::error("No se pudo eliminar.");
+            }
+        }
+    }
+
 }
 
 ?>
