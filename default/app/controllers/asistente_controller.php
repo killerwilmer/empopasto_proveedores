@@ -34,7 +34,7 @@ class AsistenteController extends AppController {
 
             if ($proveedor->save()) {
                 Flash::success("Creado correctamente");
-                Router::redirect("asistente/editar");
+                Router::redirect("asistente/editar/-1");
             }
         }
     }
