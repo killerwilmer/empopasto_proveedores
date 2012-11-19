@@ -1,0 +1,15 @@
+[Mon, 19 Nov 12 09:09:19 -0500][CRITICAL] exception 'KumbiaException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 al ejecutar <em>"SELECT COUNT(*) FROM contratos  WHERE proveedores_id="</em>' in C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\db\adapters\mysql.php:163
+Stack trace:
+#0 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\db\db_base.php(149): DbMySQL->query('SELECT COUNT(*)...')
+#1 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\kumbia_active_record\kumbia_active_record.php(1007): DbBase->fetch_one('SELECT COUNT(*)...')
+#2 [internal function]: KumbiaActiveRecord->count('order: fechafin...', 'proveedores_id=')
+#3 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\kumbia_active_record\behaviors\paginate.php(117): call_user_func_array(Array, Array)
+#4 [internal function]: Paginator::paginate(Object(Contratos), 'page: 1', 'proveedores_id=', 'per_page: 10', 'order: fechafin...')
+#5 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\kumbia_active_record\kumbia_active_record.php(2373): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\app\models\contratos.php(16): KumbiaActiveRecord->paginate('page: 1', 'proveedores_id=', 'per_page: 10', 'order: fechafin...')
+#7 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\app\controllers\asistente_controller.php(147): Contratos->paginar(1, NULL)
+#8 [internal function]: AsistenteController->contratos()
+#9 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\kumbia\dispatcher.php(79): ReflectionMethod->invokeArgs(Object(AsistenteController), Array)
+#10 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\kumbia\bootstrap.php(138): Dispatcher::execute(Array)
+#11 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\public\index.php(81): require('C:\xampp\htdocs...')
+#12 {main}
