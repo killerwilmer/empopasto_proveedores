@@ -10,7 +10,7 @@
 $dt = new DataTable($proveedores);
 $dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social','Nombres', 'Apellidos' ,'Direccion', 'Celular', 'Editar', 'Eliminar');
 $dt->addFields('id', 'identificacion', 'razonsocial', 'nombres', 'apellidos', 'direccion', 'celular');
-$dt->imgLink('figuras/editar.png', 'admin/editarproveedor');
+$dt->imgLink('figuras/editar.png', 'asistente/editar');
 $dt->imgLinkConfirm('figuras/eliminar.png', 'admin/eliminarproveedor', '', '¿Realmente desea Eliminar Este Proveedor?'); 
 echo $dt->render('class="table table-bordered table-striped"');
 ?>

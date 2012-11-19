@@ -39,11 +39,19 @@ class AsistenteController extends AppController {
         }
     }
 
-    function editar() {
-        View::template("asistente/default_ribbon");
+    function editar($idpro) {
+        
         Load::model("proveedores");
-
-        $idproveedor = Session::get("idproveedor");
+        if ($idpro != "null") {
+            View::template('admin/admin');
+            $idproveedor = $idpro;
+        }
+        else
+        {
+            View::template("asistente/default_ribbon");
+            $idproveedor = Session::get("idproveedor");
+        }
+        
         $this->proveedor = new Proveedores();
         $this->proveedor->find_first($idproveedor);
 
@@ -86,7 +94,7 @@ class AsistenteController extends AppController {
             $ap = new ActividadHasProveedores();
 
 
-            if ( $ap->count("actividad_id=$idactividad and proveedores_id=$idproveedor")==0) {
+            if ($ap->count("actividad_id=$idactividad and proveedores_id=$idproveedor") == 0) {
                 $ap->actividad_id = $idactividad;
                 $ap->proveedores_id = $idproveedor;
                 if ($ap->save()) {
@@ -95,29 +103,26 @@ class AsistenteController extends AppController {
                 } else {
                     Flash::error("Error agregando actividad");
                 }
-            }
-            else{
+            } else {
                 Flash::error("La actividad seleccionada ya existe");
             }
         }
     }
-    
-    function eliminar($idactividad){
-         View::template("asistente/default_ribbon");
-         $idproveedor = Session::get("idproveedor");
-         Load::model("actividad_has_proveedores");
-         $ap = new ActividadHasProveedores();         
-         $ap->find_first($idactividad);
-         
-         if($ap->delete()){
-             Flash::success("Se eliminó la actividad correctamente");
-             Router::redirect("asistente/actividades");
-         }
-         else{
-             Flash::error("Se eliminó la actividad correctamente");
-             Router::redirect("asistente/actividades");
-         }
-         
+
+    function eliminar($idactividad) {
+        View::template("asistente/default_ribbon");
+        $idproveedor = Session::get("idproveedor");
+        Load::model("actividad_has_proveedores");
+        $ap = new ActividadHasProveedores();
+        $ap->find_first($idactividad);
+
+        if ($ap->delete()) {
+            Flash::success("Se eliminó la actividad correctamente");
+            Router::redirect("asistente/actividades");
+        } else {
+            Flash::error("Se eliminó la actividad correctamente");
+            Router::redirect("asistente/actividades");
+        }
     }
 
     //ajax actividades
@@ -134,21 +139,20 @@ class AsistenteController extends AppController {
         $actividad = new Actividad();
         $this->division_id = Input::post('division_id');
     }
-    
+
     //listar contratos del proveedor
-    function contratos($pagina = 1){
-         View::template("asistente/default_ribbon");
+    function contratos($pagina = 1) {
+        View::template("asistente/default_ribbon");
         Load::model("contratos");
         $idproveedor = Session::get("idproveedor");
-        $this->contrato = array();        
-        
+        $this->contrato = array();
+
         try {
             $obj = new Contratos();
-            $this->contrato = $obj->paginar($pagina,$idproveedor);
+            $this->contrato = $obj->paginar($pagina, $idproveedor);
         } catch (KumbiaException $e) {
             View::excepcion($e);
         }
-        
     }
 
 }

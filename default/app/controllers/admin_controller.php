@@ -126,6 +126,10 @@ class AdminController extends ApplicationController {
             }
         }
     }
+    
+    public function eliminarproveedor(){
+        
+    }
 
 }
 
