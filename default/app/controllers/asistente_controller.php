@@ -19,8 +19,7 @@ class AsistenteController extends AppController {
         $idproveedor = Session::get("idproveedor");
         $usu = new Proveedores();
         $usu->find_first("id='$idproveedor'");
-        Flash::info($usu->tipousuario_id);
-        if ($usu->tipousuario_id==1) {
+        if ($usu->tipousuario_id == 1) {
             View::template('admin/admin');
         } else {
             View::template("asistente/default");
@@ -44,7 +43,11 @@ class AsistenteController extends AppController {
 
             if ($proveedor->save()) {
                 Flash::success("Creando correctamente");
-                Router::redirect("asistente/editar");
+                if ($usu->tipousuario_id == 1) {
+                    Router::redirect("asistente/editar/$proveedor->id");
+                } else {
+                    Router::redirect("asistente/editar");
+                }
             }
         }
     }
