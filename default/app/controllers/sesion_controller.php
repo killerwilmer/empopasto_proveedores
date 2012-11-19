@@ -24,11 +24,13 @@ class SesionController extends AppController {
                 $usu = new Proveedores();
                 $usu->find_first("identificacion='$login' and clave='$clave'");
                 if($usu->tipousuario_id==1){//admin
+                    Session::set("idproveedor", $usu->id);
+                    Session::set("idtipoproveedor",$usu->tipousuario_id);
                     Router::redirect("admin/index");
                 }
                 else if($usu->tipousuario_id==2){//proveedor
                     Session::set("idproveedor", $usu->id);
-                    Session::set("idtipoproveedor",$usu->tiipousuario_id);
+                    Session::set("idtipoproveedor",$usu->tipousuario_id);
                     Router::redirect("asistente/editar/");
                 }
             }

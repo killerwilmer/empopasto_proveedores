@@ -19,6 +19,7 @@ class AsistenteController extends AppController {
         $idproveedor = Session::get("idproveedor");
         $usu = new Proveedores();
         $usu->find_first("id='$idproveedor'");
+        Flash::info($usu->tipousuario_id);
         if ($usu->tipousuario_id==1) {
             View::template('admin/admin');
         } else {
