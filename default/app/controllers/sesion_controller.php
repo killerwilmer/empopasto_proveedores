@@ -28,6 +28,7 @@ class SesionController extends AppController {
                 }
                 else if($usu->tipousuario_id==2){//proveedor
                     Session::set("idproveedor", $usu->id);
+                    Session::set("idtipoproveedor",$usu->tiipousuario_id);
                     Router::redirect("asistente/editar/");
                 }
             }
