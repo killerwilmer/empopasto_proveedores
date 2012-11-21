@@ -86,3 +86,9 @@
 [Wed, 21 Nov 12 08:29:53 -0500][DEBUG] DESCRIBE `proveedores`
 [Wed, 21 Nov 12 08:29:53 -0500][DEBUG] SELECT COUNT(*) FROM proveedores 
 [Wed, 21 Nov 12 08:29:53 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores LIMIT 10 OFFSET 0
+[Wed, 21 Nov 12 08:37:27 -0500][DEBUG] DESCRIBE `proveedores`
+[Wed, 21 Nov 12 08:37:27 -0500][DEBUG] SELECT COUNT(*) FROM proveedores 
+[Wed, 21 Nov 12 08:37:27 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores LIMIT 10 OFFSET 0
+[Wed, 21 Nov 12 08:37:46 -0500][DEBUG] DESCRIBE `proveedores`
+[Wed, 21 Nov 12 08:37:46 -0500][DEBUG] SELECT COUNT(*) FROM proveedores 
+[Wed, 21 Nov 12 08:37:46 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores LIMIT 10 OFFSET 0
