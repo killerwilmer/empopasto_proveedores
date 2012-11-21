@@ -236,7 +236,7 @@ class AdminController extends ApplicationController {
         
         //listamos los contratos del proveedor
         $idpro = $this->proveedor->id;        
-        $obj = new Contratos();
+        $obj = new Contra();
         $this->contratos = array();
         $this->contratos2 = $obj->find("proveedores_id=$idpro");
         $this->contratos = $obj->paginar($pagina,$idpro);
