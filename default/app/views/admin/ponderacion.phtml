@@ -1,8 +1,20 @@
-<? echo Form::open() ?>
-<div><? echo View::content() ?></div>
-<div></div>
+<div id="mensajes_flash" >        
+    <?php View::content() ?>
+</div>
 <legend>Evaluación del Proveedor : <?php echo $proveedor->nombres . " " . $proveedor->apellidos ?></legend>
 <legend>Identificación : <?php echo $proveedor->identificacion ?></legend>
+<div class="well" style="padding: 8px;border-radius: 2px;">
+    <? echo Html::link("admin/nuevocontrato", "Nuevo contrato", "class='btn btn-primary'") ?>
+</div>
+
+<?php
+$dt = new DataTable($contratos);
+$dt->addFields('id', 'numero', 'objeto', 'valorini', 'fechaini', 'fechafinal', 'puntaje','puntaje * valorini');
+$dt->addHeaders('id', 'Código', 'Objeto', 'Valor inicial', 'Fecha inicial', 'Fecha final', 'Puntaje', 'Pon Parcial', 'Editar', 'Eliminar');
+$dt->imgLink('figuras/editar.png', 'admin/editarcontrato');
+$dt->imgLinkConfirm('figuras/eliminar.png', 'admin/eliminarcontrato', '', '¿Está seguro?');
+echo $dt->render('class="table table-bordered table-striped"');
+?>
 
 <div class="container-fluid">
     <div class="row-fluid">
@@ -21,7 +33,7 @@
                     <?php $valores = 0;
                     $parciales = 0;
                     ?>
-<? foreach ($contratos as $obj) { ?>
+<? foreach ($contratos2 as $obj) { ?>
                         <tr>
                             <td><? echo $obj->numero ?></td>
                             <td><? echo $obj->valorini ?></td>
@@ -52,7 +64,7 @@
                     <td>PON TOTAL</td>
                     <td><?php
                     if ($valores >0){
-                        echo $parciales / $valores;
+                        echo round($parciales / $valores ,2);
                     }                    
                     ?>
                     </td>
@@ -61,3 +73,4 @@
         </div>
     </div>
 </div>
+

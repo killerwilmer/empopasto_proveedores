@@ -6,12 +6,11 @@
  */
 
 /**
- * Description of contratos
+ * Description of contra
  *
  * @author wilmerarteaga
  */
-class Contratos extends ActiveRecord {
-    //put your code here
+class Contra extends ActiveRecord {
     public function paginar($pagina = 1,$idproveedor) {
         return $this->paginate("page: $pagina","proveedores_id=$idproveedor","per_page: 10","order: fechafinal desc");
     }

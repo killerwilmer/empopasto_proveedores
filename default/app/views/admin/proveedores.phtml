@@ -21,7 +21,7 @@
 </div>
 <?php
 $dt = new DataTable($proveedores);
-$dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social','Nombres', 'Apellidos' ,'Direccion', 'Celular', 'Editar', 'Actividades','Eliminar');
+$dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social','Nombres', 'Apellidos' ,'Direccion', 'Celular', 'Editar', 'Actividades','Contratos','Eliminar');
 $dt->addFields('id', 'identificacion', 'razonsocial', 'nombres', 'apellidos', 'direccion', 'celular');
 $dt->imgLink('figuras/editar.png', 'admin/editarproveedor');
 $dt->imgLink('figuras/ver.png', 'admin/actividades');

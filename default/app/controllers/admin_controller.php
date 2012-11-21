@@ -10,7 +10,7 @@
  *
  * @author wilmerarteaga
  */
-Load::models('proveedores', 'contratos', 'Actividad_Has_Proveedores');
+Load::models('proveedores', 'contratos', 'Actividad_Has_Proveedores','contra');
 View::template('admin/admin');
 
 class AdminController extends ApplicationController {
@@ -227,7 +227,7 @@ class AdminController extends ApplicationController {
         }
     }
 
-     public function ponderacion($idproveedor){
+     public function ponderacion($idproveedor,$pagina = 1){
         //campos del proveedor
         $this->proveedor = new Proveedores();
         $this->proveedor->find_first($idproveedor);
@@ -236,7 +236,8 @@ class AdminController extends ApplicationController {
         $idpro = $this->proveedor->id;        
         $obj = new Contratos();
         $this->contratos = array();
-        $this->contratos = $obj->find("proveedores_id=$idpro");
+        $this->contratos2 = $obj->find("proveedores_id=$idpro");
+        $this->contratos = $obj->paginar($pagina,$idpro);
     }
 
 }
