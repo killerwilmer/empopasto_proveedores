@@ -16,18 +16,30 @@ View::template('admin/admin');
 class AdminController extends ApplicationController {
 
     public function index() {
-        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
     }
 
     //*** Contratos ***//
 
     public function contratos() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         $obj = new Contratos();
         $this->contratos = array();
         $this->contratos = $obj->find();
     }
 
     public function nuevocontrato($idpro) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         $this->proveedor = new Proveedores();
         $this->proveedor->find_first($idpro);
         if (Input::hasPost('contratos')) {
@@ -40,6 +52,11 @@ class AdminController extends ApplicationController {
     }
 
     public function editarcontrato($idcontrato) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         $this->objContrato = new Contratos();
         $this->objContrato->find_first($idcontrato);
 
@@ -57,6 +74,11 @@ class AdminController extends ApplicationController {
     }
 
     public function eliminarcontrato($idcontrato) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         $this->objContrato = new Contratos();
         $this->objContrato->find_first($idcontrato);
 
@@ -74,6 +96,11 @@ class AdminController extends ApplicationController {
     //*** Proveedores ***//
 
     function proveedores($pagina = 1) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         try {
             $pro = new Proveedores();
             $this->proveedores = $pro->paginar($pagina);
@@ -104,6 +131,11 @@ class AdminController extends ApplicationController {
     }
 
     public function nuevoproveedor() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::model('proveedores');
         View::template("admin/admin");
 
@@ -132,6 +164,11 @@ class AdminController extends ApplicationController {
     }
 
     public function editarproveedor($idproveedor) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::model("proveedores");
 
         View::template('admin/admin');
@@ -163,6 +200,10 @@ class AdminController extends ApplicationController {
 
     public function eliminarproveedor($idproveedor) {
 
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         $prov = new Proveedores();
         $ap = new ActividadHasProveedores();
         $cont = new Contratos();
@@ -184,6 +225,11 @@ class AdminController extends ApplicationController {
     }
 
     function actividades($idproveedor) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         View::template("admin/admin");
         Load::model("actividad_has_proveedores");
 
@@ -215,6 +261,11 @@ class AdminController extends ApplicationController {
     }
 
     function eliminaractividad($idactividad, $idproveedor) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         View::template("admin/admin");
 
         $ap = new ActividadHasProveedores();
@@ -230,6 +281,11 @@ class AdminController extends ApplicationController {
     }
 
      public function ponderacion($idproveedor,$pagina = 1){
+         
+         if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+         
         //campos del proveedor
         $this->proveedor = new Proveedores();
         $this->proveedor->find_first($idproveedor);
