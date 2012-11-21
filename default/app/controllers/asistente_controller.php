@@ -16,16 +16,8 @@ class AsistenteController extends AppController {
 
     function asistente1() {//personales
         Load::model('proveedores');
-        $idproveedor = Session::get("idproveedor");
-        $usu = new Proveedores();
-        $usu->find_first("id='$idproveedor'");
-        if ($usu->tipousuario_id == 1) {
-            View::template('admin/admin');
-        } else {
-            View::template("asistente/default");
-        }
-
-        Load::model("proveedores");
+        View::template("asistente/default");
+ 
         if (Input::hasPost("proveedores")) {
 
 
@@ -43,26 +35,20 @@ class AsistenteController extends AppController {
 
             if ($proveedor->save()) {
                 Flash::success("Creando correctamente");
-                if ($usu->tipousuario_id == 1) {
-                    Router::redirect("asistente/editar/$proveedor->id");
-                } else {
-                    Router::redirect("asistente/editar");
-                }
+                Router::redirect("asistente/editar/");
+                
             }
         }
     }
 
-    function editar($idpro = -1) {
+    function editar() {
 
         Load::model("proveedores");
-        if ($idpro != -1) {
-            View::template('admin/admin');
-            $idproveedor = $idpro;
-        } else {
-            View::template("asistente/default_ribbon");
-            $idproveedor = Session::get("idproveedor");
-        }
-
+        
+        View::template('asistente/default_ribbon');
+       
+        $idproveedor= Session::get("idproveedor");
+        
         $this->proveedor = new Proveedores();
         $this->proveedor->find_first($idproveedor);
 
@@ -83,7 +69,7 @@ class AsistenteController extends AppController {
 
             if ($proveedor->update()) {
                 Flash::success("Actualizado correctamente");
-                Router::redirect("asistente/editar/" . $idpro);
+                Router::redirect("asistente/editar/");
             }
         }
     }
@@ -103,8 +89,7 @@ class AsistenteController extends AppController {
             $idproveedor = Session::get("idproveedor");
 
             $ap = new ActividadHasProveedores();
-
-
+            
             if ($ap->count("actividad_id=$idactividad and proveedores_id=$idproveedor") == 0) {
                 $ap->actividad_id = $idactividad;
                 $ap->proveedores_id = $idproveedor;

@@ -12,6 +12,8 @@
  */
 class Proveedores extends ActiveRecord {
 
+    public $logger=true;
+    
     public function initialize() {
 
         $this->validates_presence_of('email', 'message: Debe escribir un <b>correo electronico</b>');
