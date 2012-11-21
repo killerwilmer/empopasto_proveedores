@@ -27,12 +27,14 @@ class AdminController extends ApplicationController {
         $this->contratos = $obj->find();
     }
 
-    public function nuevocontrato() {
+    public function nuevocontrato($idpro) {
+        $this->proveedor = new Proveedores();
+        $this->proveedor->find_first($idpro);
         if (Input::hasPost('contratos')) {
             $contrato = new Contratos(Input::post("contratos"));
             if ($contrato->save()) {
                 Flash::success("Creado correctamente");
-                Router::redirect("admin/contratos");
+                Router::redirect("admin/ponderacion/".$this->proveedor->id);
             }
         }
     }

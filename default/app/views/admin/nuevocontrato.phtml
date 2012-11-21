@@ -1,5 +1,6 @@
 <legend>Nuevo Contrato.</legend>
 <?php echo Form::open(); ?>
+<? echo Form::hidden("contratos.proveedores_id", null, "$proveedor->id")?>
 
 <div> <? echo Form::label("Numero del contrato", "contratos.numero") ?>
     <? echo Form::text("contratos.numero", "class='input-large' placeholder='Numero del contrato'") ?></div>
@@ -20,7 +21,7 @@
     <? echo Form::text("contratos.puntaje", "class='input-large' placeholder='Puntaje'") ?></div>
 
 <div> <? echo Form::label("Proveedor", "contratos.proveedor_id") ?>
-    <? echo Form::text("contratos.proveedores_id", "class='input-large' placeholder='Proveedor'") ?></div>
+    <? echo Form::text("contratos.proveedores_id", "class='input-large' placeholder='Proveedor' disabled='true' ","$proveedor->nombres $proveedor->apellidos") ?></div>
 
 <? echo Form::submit("Guardar", "class='btn btn-primary'") ?>
 

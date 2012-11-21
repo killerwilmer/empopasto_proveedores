@@ -4,7 +4,9 @@
 <legend>Evaluación del Proveedor : <?php echo $proveedor->nombres . " " . $proveedor->apellidos ?></legend>
 <legend>Identificación : <?php echo $proveedor->identificacion ?></legend>
 <div class="well" style="padding: 8px;border-radius: 2px;">
-    <? echo Html::link("admin/nuevocontrato", "Nuevo contrato", "class='btn btn-primary'") ?>
+    <?php Form::open() ?>
+    <? echo Html::link("admin/nuevocontrato/$proveedor->id", "Nuevo contrato", "class='btn btn-primary'") ?>    
+    <?php Form::close() ?>
 </div>
 
 <?php
