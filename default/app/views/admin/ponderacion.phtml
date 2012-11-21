@@ -1,0 +1,63 @@
+<? echo Form::open() ?>
+<div><? echo View::content() ?></div>
+<div></div>
+<legend>Evaluación del Proveedor : <?php echo $proveedor->nombres . " " . $proveedor->apellidos ?></legend>
+<legend>Identificación : <?php echo $proveedor->identificacion ?></legend>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span10">
+            <table class="table table-bordered table-striped">
+                <thead><tr style="text-align:center;font-weight:bold;">
+                        <th>CONTRATO</th>
+                        <th>VALOR INICIAL</th>
+                        <th>F. SUSCRIPCIÓN</th>
+                        <th>F. TERMINACION</th>
+                        <th>PUN. OBTENIDO</th>
+                        <th>PON. PARCIAL</th>
+                    </tr></thead>   
+
+                <tbody>
+                    <?php $valores = 0;
+                    $parciales = 0;
+                    ?>
+<? foreach ($contratos as $obj) { ?>
+                        <tr>
+                            <td><? echo $obj->numero ?></td>
+                            <td><? echo $obj->valorini ?></td>
+                            <td><? echo $obj->fechaini ?></td>
+                            <td><? echo $obj->fechafinal ?></td>
+                            <td><? echo $obj->puntaje ?></td>
+                            <td><? echo $obj->valorini * $obj->puntaje ?></td>
+                        </tr>
+                        <?
+                        $valores += $obj->valorini;
+                        $parciales +=($obj->valorini * $obj->puntaje);
+                    }
+                    ?> 
+                </tbody>
+                <tr style="color: blue">
+                    <td>SUM CONTRATOS</td>
+                    <td><?php echo $valores ?></td>
+                    <td></td>
+                    <td></td>
+                    <td>SUM PARCIALES</td>
+                    <td><?php echo $parciales ?></td>
+                </tr>
+                <tr style="color: #408140">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>PON TOTAL</td>
+                    <td><?php
+                    if ($valores >0){
+                        echo $parciales / $valores;
+                    }                    
+                    ?>
+                    </td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+</div>
