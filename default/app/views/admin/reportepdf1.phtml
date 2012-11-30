@@ -1,0 +1,18 @@
+<?
+
+$pdf = new FPDF();
+
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont('Arial', 'B', 60);
+$pdf->Ln(0);
+$pdf->SetDrawColor(0, 0, 0);
+$pdf->SetFillColor(230, 230, 0);
+$pdf->SetTextColor(0, 80, 255);
+
+foreach ($matriz as $puesto => $val) {
+    
+    $pdf->Cell(65, 10, "Empopasto" . $val, 1, 0, 'L', false);
+}
+
+$pdf->Output()?>

@@ -1,0 +1,1 @@
+[Wed, 28 Nov 12 16:56:03 -0500][DEBUG] DESCRIBE `proveedores`

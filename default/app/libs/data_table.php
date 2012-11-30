@@ -225,11 +225,11 @@ class DataTable {
      * @param string $boolean_field campo del modelo que se usará para
      * condicionar la si se muestra ó no el check (opcional)
      */
-    public function check($field_name, $boolean_field = NULL) {
+    public function check($field_name, $boolean_field = NULL,$checked=0) {
         $this->addFields(array(
             'field' => $this->_primary_key,
             'boolean_field' => $boolean_field,
-            'options' => array(Form::check("$field_name.%s", '%s'), NULL)
+            'options' => array(Form::check("$field_name.%s", '%s','',$checked), NULL)
         ));
     }
 

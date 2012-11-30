@@ -11,7 +11,13 @@
         <a href="#tab3" data-toggle="tab" class="btn btn-inverse">3.Datos comerciales</a>
         <? echo Form::submit("4.Guardar mis datos", "class='btn btn-success'") ?>
     </div>
+    <div class="btn-group">
+    
+     <?echo Form::button("Actividades","class='btn btn-primary disabled'")?>
+      <?echo Form::button("Contratos","class='btn btn-danger disabled'")?>
 </div>
+</div>
+
 <br>
 <div class="tabbable"> 
 
@@ -29,17 +35,17 @@
                         <br>
                         <div><? echo Form::label("Tipo identificación:", "proveedores.tipo_identificacion_id") ?></div>
                         <? echo Form::dbSelect('tipo_identificacion.tipo_identificacion_id', 'nombre'); ?><!-- modelo . campo relacionado -->
-                        <a href="#" rel="tooltip" title="Identificación personal del proveedor" data-placement="top"><div class="control-group"> <? echo Form::text('proveedores.identificacion', 'class="input-large" placeholder="Número de identificación"') ?></div></a>
-                        <a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="top"><div class="control-group"><? echo Form::text('proveedores.nombres', 'class="input-large" placeholder="Nombres"') ?></div></a>
-                        <a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="top"><div class="control-group"> <? echo Form::text('proveedores.apellidos', 'class="input-large" placeholder="Apellidos"') ?></div></a>
-                        <a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="top"><div class="control-group"> <? echo Form::text('proveedores.direccion', 'class="input-large" placeholder="Dirección"') ?></div></a>
-                        <a href="#" rel="tooltip" title="Solo números" data-placement="top"><div class="control-group"> <? echo Form::text('proveedores.celular', 'class="input-large" placeholder="Celular"') ?></div></a>
-                        <a href="#" rel="tooltip" title="nombre@correo.com" data-placement="top"><div class="control-group"> <? echo Form::text('proveedores.email', 'class="input-large" placeholder="Email"') ?></div></a>
-                        <a href="#" rel="tooltip" title="Solo números" data-placement="top"><div class="control-group"> <? echo Form::text('proveedores.telefono', 'class="input-large" placeholder="Telefono fijo"') ?></div></a>
-                        <a href="#" rel="tooltip" title="Solo números" data-placement="top"><div class="control-group"> <? echo Form::text('proveedores.fax', 'class="input-large" placeholder="Fax"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Identificación personal del proveedor" data-placement="right"> <? echo Form::text('proveedores.identificacion', 'class="input-large" placeholder="Número de identificación"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="right"><? echo Form::text('proveedores.nombres', 'class="input-large" placeholder="Nombres"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="right"> <? echo Form::text('proveedores.apellidos', 'class="input-large" placeholder="Apellidos"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="right"> <? echo Form::text('proveedores.direccion', 'class="input-large" placeholder="Dirección"') ?></div></a>
+                        <div class="control-group"> <a href="#" rel="tooltip" title="Solo números" data-placement="right"><? echo Form::text('proveedores.celular', 'class="input-large" placeholder="Celular"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="nombre@correo.com" data-placement="right"> <? echo Form::text('proveedores.email', 'class="input-large" placeholder="Email"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Solo números" data-placement="right"> <? echo Form::text('proveedores.telefono', 'class="input-large" placeholder="Telefono fijo"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Solo números" data-placement="right"> <? echo Form::text('proveedores.fax', 'class="input-large" placeholder="Fax"') ?></div></a>
                         <div><? echo Form::label("Ciudad:", "proveedores.ciudad_id") ?></div>
                         <? echo Form::dbSelect('ciudad.ciudad_id', 'nombre'); ?><!-- modelo . campo relacionado -->
-                        <a href="#" rel="tooltip" title="Clave de acceso" data-placement="top"><div class="control-group"> <? echo Form::pass('proveedores.clave', 'class="input-large" placeholder="Contraseña"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Clave de acceso" data-placement="right"> <? echo Form::pass('proveedores.clave', 'class="input-large" placeholder="Contraseña"') ?></div></a>
                       
                     </div>
                 </div>
@@ -55,10 +61,10 @@
                 <div class="span10">
 
                     <br>
-                    <a href="#" rel="tooltip" title="Escriba su profesión" data-placement="top"><div class="control-group"> <?php echo Form::text('proveedores.profesion', 'class="input-large" placeholder="Profesión"') ?></div></a>
-                    <a href="#" rel="tooltip" title="Tarjeta profesional" data-placement="top"><div class="control-group"> <?php echo Form::text('proveedores.tarjeta', 'class="input-large" placeholder="Tarjeta Profesional"') ?></div></a>
+                    <div class="control-group"><a href="#" rel="tooltip" title="Escriba su profesión" data-placement="right"> <?php echo Form::text('proveedores.profesion', 'class="input-large" placeholder="Profesión"') ?></div></a>
+                    <div class="control-group"><a href="#" rel="tooltip" title="Tarjeta profesional" data-placement="right"> <?php echo Form::text('proveedores.tarjeta', 'class="input-large" placeholder="Tarjeta Profesional"') ?></div></a>
                     <div>Formación académica persona natural.</div>
-                    <a href="#" rel="tooltip" title="Resuma su formación académica" data-placement="top"><div class="control-group"><?php echo Form::textarea("proveedores.educacion", "class='input-xlarge' placeholder='Escriba aquí'") ?></div></a>
+                    <div class="control-group"><a href="#" rel="tooltip" title="Resuma su formación académica" data-placement="right"><?php echo Form::textarea("proveedores.educacion", "class='input-xlarge' placeholder='Escriba aquí'") ?></div></a>
 
                 </div>
             </div>
@@ -71,8 +77,8 @@
                 <div class="span10">
 
                     <br>
-                    <a href="#" rel="tooltip" title="Razón social o nombre de empresa" data-placement="top"><div class="control-group"> <?php echo Form::text('proveedores.razonsocial', 'class="input-large" placeholder="Nombre o razón social"') ?></div></a>
-                    <a href="#" rel="tooltip" title="Registro Unico Tributario" data-placement="top"><div class="control-group"> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"') ?></div></a>
+                    <div class="control-group"><a href="#" rel="tooltip" title="Razón social o nombre de empresa" data-placement="right"> <?php echo Form::text('proveedores.razonsocial', 'class="input-large" placeholder="Nombre o razón social"') ?></div></a>
+                    <div class="control-group"><a href="#" rel="tooltip" title="Registro Unico Tributario" data-placement="right"> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"') ?></div></a>
                     <div>Fecha matrícula de Cámara de Comercio</div>
                     <div ><?php echo Form::date('proveedores.camcomfecfin', 'class="input-large" placeholder="Día/Mes/Año"') ?></div>
                     <div>Tipo entidad</div>

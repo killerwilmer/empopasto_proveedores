@@ -34,7 +34,9 @@ class AsistenteController extends AppController {
             $proveedor->tipousuario_id = "2";
 
             if ($proveedor->save()) {
-                Flash::success("Creando correctamente");
+                Session::set("idproveedor", $proveedor->id);
+                Session::set("idtipoproveedor","2");
+                Flash::success("Creado correctamente");
                 Router::redirect("asistente/editar/");
                 
             }
@@ -42,8 +44,8 @@ class AsistenteController extends AppController {
     }
 
     function editar() {
-
-        Load::model("proveedores");
+         
+        Load::models("proveedores","actividad_has_proveedores");
         
         View::template('asistente/default_ribbon');
        
@@ -51,6 +53,11 @@ class AsistenteController extends AppController {
         
         $this->proveedor = new Proveedores();
         $this->proveedor->find_first($idproveedor);
+        
+        $actividades = new ActividadHasProveedores();       
+        if($actividades->count("proveedores_id=$idproveedor")==0){
+            Flash::notice("No tiene ninguna actividad relacionada.");
+        }
 
         if (Input::hasPost("proveedores")) {
 

@@ -5,27 +5,88 @@
 </div>
 <div class="well" style="padding: 8px;border-radius: 2px;">
     <? echo Html::link("admin/nuevoproveedor", "Nuevo proveedor", "class='btn btn-primary'") ?>
+
 </div>
-<div>
+<div class="well" style="padding: 8px;border-radius: 2px;">
     <? echo Form::open("admin/proveedores", "POST", "class='form-inline'") ?>
     Buscar por: 
 
     <?
-    $comboBusqueda = array('IDENTIFICACION', 'APELLIDO');
+    $comboBusqueda = array('IDENTIFICACION', 'APELLIDO', 'NOMBRE/RAZON SOCIAL');
 
     echo Form::select("comboBusqueda", $comboBusqueda, "IDENTIFICACION");
     echo Form::text("textoBusqueda", "class='input-medium search-query'");
-    echo Form::submit("Buscar", "class='btn btn-danger'")
+    echo Form::submit("Buscar", "class='btn btn-danger'");
     ?>
+    <? echo Html::link("admin/proveedores", "Mostrar todos", "class='btn btn-success'") ?>
     <? echo Form::close() ?>
+</div >
+<div class="well" style="padding: 8px;border-radius: 2px;">
+    <? echo Form::open("admin/proveedores", "POST", null) ?>
+    <table>
+        <tr>
+            <td>
+                Sección:
+                <div id="div_seccion">
+                    <? echo Form::dbSelect('seccion.seccion_id', 'nombre'); ?>
+                </div>
+            </td>
+            <td>
+                División:
+                <div id='div_division'>
+
+                    <select id="division_division_id" name="division_division_id"><option value="">Seleccione</option></select>
+                </div> 
+            </td>
+            <td>
+                Actividad:
+                <div id='div_actividad'>
+                    <select id="actividad_actividad_id" name="actividad_actividad_id"><option value="">Seleccione</option></select>
+                </div>
+            </td>
+            <td>
+                <? echo Form::submit("Buscar", "class='btn btn-danger'") ?>
+            </td>
+
+            <? echo Form::close() ?>
+        </tr>
+    </table>
+</div>
+<? echo Form::open("admin/reportepdf1") ?>
+<div class="well" style="padding: 8px;border-radius: 2px;">
+    <?
+    echo Form::label("Tipo de reporte:","comboBusqueda");
+    $comboBusqueda = array('CVS', 'PDF');
+    echo Form::select("comboBusqueda", $comboBusqueda, "CVS");
+    ?>
+    <? echo Form::submit("Crear reporte", "class='btn btn-danger'") ?>
 </div>
 <?php
 $dt = new DataTable($proveedores);
-$dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social','Nombres', 'Apellidos' ,'Direccion', 'Celular', 'Editar', 'Actividades','Contratos','Eliminar');
+$dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social', 'Nombres', 'Apellidos', 'Direccion', 'Celular', 'Reporte', 'Editar', 'Actividades', 'Contratos', 'Eliminar');
 $dt->addFields('id', 'identificacion', 'razonsocial', 'nombres', 'apellidos', 'direccion', 'celular');
+$dt->check('id',null,1);
 $dt->imgLink('figuras/editar.png', 'admin/editarproveedor');
 $dt->imgLink('figuras/actividades.png', 'admin/actividades');
 $dt->imgLink('figuras/contrato.png', 'admin/ponderacion');
-$dt->imgLinkConfirm('figuras/eliminar.png', 'admin/eliminarproveedor', '', '¿Realmente desea Eliminar Este Proveedor?'); 
+$dt->imgLinkConfirm('figuras/eliminar.png', 'admin/eliminarproveedor', '', '¿Realmente desea Eliminar Este Proveedor?');
 echo $dt->render('class="table table-bordered table-striped"');
 ?>
+
+<? echo Form::close() ?>
+
+<script type='text/javascript'>
+    $("#seccion_seccion_id").change(function(){
+        var seccion_id = $('#seccion_seccion_id').val();
+        $.ajax({
+            type: "POST",
+            url: "<?php echo PUBLIC_PATH . 'asistente/getDivisiones/'; ?>",
+            data: "seccion_id=" + seccion_id,
+            success: function(html){
+                $("#div_division").html(html);
+                
+                
+            }
+        });
+    });
+</script>
