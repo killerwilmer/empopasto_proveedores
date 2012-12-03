@@ -1,5 +1,4 @@
 <?php
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -352,26 +351,128 @@ class AdminController extends ApplicationController {
                 $ac = new Actividad();
 
                 if ($ac->count("codigo = $obj->codigo") > 0) {
-                    
+
                     $ac->find_first("codigo = $obj->codigo");
                     $ap = new ActividadHasProveedores();
-                    
-                    Flash::notice($ac->id."-".$prov->id);
-                    
+
+                    Flash::notice($ac->id . "-" . $prov->id);
+
                     $ap->actividad_id = $ac->id;
                     $ap->proveedores_id = $prov->id;
                     $ap->save();
+                } else {
+                    Flash::notice("codigono encontrado" . $obj->codigo);
                 }
-                else{
-                    Flash::notice("codigono encontrado".$obj->codigo);
-                }
-            }
-            else{
-                Flash::notice("prveedor no encontrado".$obj->identificacion);
+            } else {
+                Flash::notice("prveedor no encontrado" . $obj->identificacion);
             }
         }
     }
 
-}
+    //SUBIDA DE PLANOS
+    public function subirplano() {
+        Load::lib('Excel/reader');
+        View::select('subirplano');  //para mostrar siempre la vista con los formularios
+        if (Input::hasPost('oculto')) {  //para saber si se envió el form
+            $archivo = Upload::factory('archivo'); //llamamos a la libreria y le pasamos el nombre del campo file del formulario
 
+            $archivo->setExtensions(array('xls')); //le asignamos las extensiones a permitir
+            if ($archivo->isUploaded()) {
+                $archivo->overwrite(true);
+                if ($archivo->save('prueba')) {
+                    $new_name = "prueba.xls";
+                    $dir = KILLER_PATH . "files/upload";
+                    $reader = new Spreadsheet_Excel_Reader();
+                    $reader->setUTFEncoder('UTF-8');
+                    $reader->setOutputEncoding('UTF-8');
+                    $reader->read("$dir/$new_name");
+                    $i = 1;
+                    foreach ($reader->sheets as $k => $data) {
+
+                        foreach ($data['cells'] as $row) {
+                            foreach ($row as $cell) {
+                                //echo "$cell\t";
+                            }
+                            //echo "\n";
+                            $originalDate = $reader->sheets[0]['cells'][$i][7];
+                            $newDate = date("Y-m-d", strtotime($originalDate));
+                            $originalDate2 = $reader->sheets[0]['cells'][$i][8];
+                            $newDate2 = date("Y-m-d", strtotime($originalDate2));
+                            $array_usuarios[] = array(
+                                'numero' => $reader->sheets[0]['cells'][$i][1],
+                                'objeto' => $reader->sheets[0]['cells'][$i][2],
+                                'valorini' => $reader->sheets[0]['cells'][$i][3],
+                                'fechaini' => $newDate,
+                                'fechafinal' => $newDate2,
+                                'puntaje' => $reader->sheets[0]['cells'][$i][9],
+                                'proveedores_id' => $reader->sheets[0]['cells'][$i][4],
+                                'vigencia' => $reader->sheets[0]['cells'][$i][6]
+                            );
+                            $i++;
+                        }
+                    }
+
+                    $tamano = count($array_usuarios);
+                    //$this->sql('BEGIN');
+                    ?>
+                    <table>
+                        <tr>
+                            <th>NUMERO</th>
+                            <th>OBJETO</th>
+                            <th>VALOR INI</th>
+                            <th>FECHA  INI</th>
+                            <th>FECHA FINAL</th>
+                            <th>PUNTAJE</th>
+                            <th>ID PRO</th>
+                            <th>VIGENCIA</th>
+                        </tr><?
+                    for ($i = 0; $i < $tamano; $i++) {
+                        $miContrato = new Contratos();
+                        $miProveedor = new Proveedores();
+                        $miContrato->numero = $array_usuarios[$i]['numero'];
+                        $miContrato->objeto = $array_usuarios[$i]['objeto'];
+                        $miContrato->valorini = $array_usuarios[$i]['valorini'];
+                        $miContrato->fechaini = $array_usuarios[$i]['fechaini'];
+                        $miContrato->fechafinal = $array_usuarios[$i]['fechafinal'];
+                        $miContrato->puntaje = $array_usuarios[$i]['puntaje'];
+                        $miContrato->proveedores_id = $array_usuarios[$i]['proveedores_id'];
+                        $miContrato->vigencia = $array_usuarios[$i]['vigencia'];
+
+                        if ($miProveedor->count("identificacion=$miContrato->proveedores_id")) {//si exixte el proveedor
+                            $miContrato->proveedores_id = $miProveedor->find_first("identificacion=$miContrato->proveedores_id")->id;
+                            $array_usuarios[$i]['proveedores_id'] = $miContrato->proveedores_id;
+                            if ($miContrato->count("numero=$miContrato->numero") == 0) {//si el contrato aun no existe
+                                if ($miContrato->save()) {
+                                    Flash::success("Exito. ". $miContrato->numero . "  " . $miContrato->proveedores_id);
+                                } else {
+                                    Flash::error("Error. ". $miContrato->numero . "  " . $miContrato->proveedores_id);
+                                }
+                            } else {
+                                Flash::info("No agregar " . $miContrato->numero . "  " . $miContrato->proveedores_id);
+                            }
+                        }
+                        ?>
+                            <tr>
+                                <td><?php echo $array_usuarios[$i]['numero'] ?></td>
+                                <td><?php echo $array_usuarios[$i]['objeto'] ?></td>
+                                <td><?php echo $array_usuarios[$i]['valorini'] ?></td>
+                                <td><?php echo $array_usuarios[$i]['fechaini'] ?></td>
+                                <td><?php echo $array_usuarios[$i]['fechafinal'] ?></td>
+                                <td><?php echo $array_usuarios[$i]['puntaje'] ?></td>
+                                <td><?php echo $array_usuarios[$i]['proveedores_id'] ?></td>
+                                <td><?php echo $array_usuarios[$i]['vigencia'] ?></td>
+                            </tr><? }
+                    ?>
+                    </table>
+                    <?php
+                    //$this->sql('COMMIT');
+
+                    Flash::valid('Archivo subido correctamente...!!!');
+                }
+            } else {
+                Flash::warning('No se ha Podido Subir el Archivo...!!!');
+            }
+        }
+    }
+}
 ?>

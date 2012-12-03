@@ -44,6 +44,8 @@ define('START_TIME', microtime(1));
  */
 define('APP_PATH', dirname(dirname(__FILE__)) . '/app/');
 
+define('KILLER_PATH', dirname(dirname(__FILE__)) . '/public/');
+
 /**
  * Define el CORE_PATH
  *
