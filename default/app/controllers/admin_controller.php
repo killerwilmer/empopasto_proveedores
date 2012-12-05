@@ -477,11 +477,8 @@ class AdminController extends ApplicationController {
     }
 
     function reporteExcelContrato1() {
-        View::response("view");
+        //View::response("view");
         Load::lib("PHPExcel/PHPExcel");
-       
-        
-        
     }
 
 }

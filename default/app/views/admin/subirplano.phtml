@@ -2,7 +2,7 @@
 <br/>
 <h1>Subida de Archivo</h1>
 <?php echo Form::openMultipart('admin/subirplano') ?>
-    Ingrese un archivo .zip ó .rar:
+    Ingrese un archivo .xls:
     <?php echo Form::file('archivo') ?>
     <?php echo Form::hidden('oculto') //para saber si se envió el form ?>
     <?php echo Form::submit('subir') ?>

@@ -24,8 +24,6 @@ $fecha = date("Ymdhis");
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 $nombre = 'reportes/MyExcel'.$fecha.'.xlsx';
 $objWriter->save("$nombre");    
-//$objWriter->save('php://output'); 
-
-
-
+//$objWriter->save('php://output');
+echo "<a href='".PUBLIC_PATH.$nombre."'>Descargar</a>";
 ?>
