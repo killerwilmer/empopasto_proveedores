@@ -1,0 +1,31 @@
+
+<?
+/* Here there will be some code where you create $objPHPExcel */
+
+$ruta = APP_PATH."temp/templates_informes/template_evaluacionproveedores.xlsx";
+
+
+$objPHPExcel = PHPExcel_IOFactory::load($ruta);
+// Set properties
+$objPHPExcel->getProperties()->setCreator("Empopasto S.A")
+				->setLastModifiedBy("Empopasto S.A")
+				->setTitle("Reporte de evaluación del proveedor")
+				->setSubject("Reporte de evaluación del proveedor")
+				->setDescription("Reporte de evaluación del proveedor")
+				->setKeywords("reporte evaluación proveedor")
+				->setCategory("Reportes");
+$objPHPExcel->getActiveSheet()->setTitle('Reporte');
+
+$objPHPExcel->setActiveSheetIndex(0)
+            ->setCellValue('A7', 'Hello')
+            ;
+$fecha = date("Ymdhis");
+
+$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+$nombre = 'reportes/MyExcel'.$fecha.'.xlsx';
+$objWriter->save("$nombre");    
+//$objWriter->save('php://output'); 
+
+
+
+?>

@@ -1,4 +1,32 @@
-<?echo View::partial("validacion/asistente1")?>
+<script type="text/javascript">
+    var x;
+    x=$(document);
+    x.ready(inicializarEventos);
+
+    function inicializarEventos()
+    {
+        
+        
+        var comp = document.getElementById("tipo_entidad_tipo_entidad_id");
+        var idco = comp.options[comp.selectedIndex].value;
+        
+        //alert(idco);
+        if(idco==1){
+            var razonsocial = document.getElementById("proveedores_nombres").value+' '+document.getElementById("proveedores_apellidos").value;
+            document.getElementById("proveedores_razonsocial").value =  razonsocial;
+            var rut = document.getElementById("proveedores_identificacion").value;
+            document.getElementById("proveedores_rut").value =  rut;
+            
+        }
+        else{
+            document.getElementById("proveedores_razonsocial").value =  "";
+        }
+    }
+
+    
+</script>
+
+<? echo View::partial("validacion/asistente1") ?>
 <br>
 <? echo Form::open("", "POST", "id='formulario'") ?>
 <div><? echo View::content() ?></div>
@@ -6,16 +34,16 @@
 <div><legend>Registro de proveedores para Empopasto S.A</legend></div>
 <div class="btn-toolbar">
     <div class="btn-group">
-        <a href="#tab1" data-toggle="tab" class="btn btn-danger">1.Datos personales</a>
+        <a href="#tab1" data-toggle="tab" class="btn btn-danger">1.Datos personales de contacto</a>
         <a href="#tab2" data-toggle="tab" class="btn btn-warning">2.Datos profesionales</a>
         <a href="#tab3" data-toggle="tab" class="btn btn-inverse">3.Datos comerciales</a>
         <? echo Form::submit("4.Guardar mis datos", "class='btn btn-success'") ?>
     </div>
     <div class="btn-group">
-    
-     <?echo Form::button("Actividades","class='btn btn-primary disabled'")?>
-      <?echo Form::button("Contratos","class='btn btn-danger disabled'")?>
-</div>
+
+        <? echo Form::button("Actividades", "class='btn btn-primary disabled'") ?>
+        <? echo Form::button("Contratos", "class='btn btn-danger disabled'") ?>
+    </div>
 </div>
 
 <br>
@@ -31,13 +59,15 @@
                         <div></div>
                     </div>
                     <div class="span10">
-                        
+
                         <br>
+                        <div>Tipo entidad</div>
+                        <div> <? echo Form::dbSelect('tipo_entidad.tipo_entidad_id', 'nombre',null,null,"onchange=inicializarEventos()"); ?></div>    
                         <div><? echo Form::label("Tipo identificación:", "proveedores.tipo_identificacion_id") ?></div>
                         <? echo Form::dbSelect('tipo_identificacion.tipo_identificacion_id', 'nombre'); ?><!-- modelo . campo relacionado -->
-                        <div class="control-group"><a href="#" rel="tooltip" title="Identificación personal del proveedor" data-placement="right"> <? echo Form::text('proveedores.identificacion', 'class="input-large" placeholder="Número de identificación"') ?></div></a>
-                        <div class="control-group"><a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="right"><? echo Form::text('proveedores.nombres', 'class="input-large" placeholder="Nombres"') ?></div></a>
-                        <div class="control-group"><a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="right"> <? echo Form::text('proveedores.apellidos', 'class="input-large" placeholder="Apellidos"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Identificación personal del proveedor" data-placement="right"> <? echo Form::text('proveedores.identificacion', 'class="input-large" placeholder="Número de identificación" oninput="inicializarEventos()"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="right"><? echo Form::text('proveedores.nombres', 'class="input-large" placeholder="Nombres" oninput="inicializarEventos()"') ?></div></a>
+                        <div class="control-group"><a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="right"> <? echo Form::text('proveedores.apellidos', 'class="input-large" placeholder="Apellidos" oninput="inicializarEventos()"') ?></div></a>
                         <div class="control-group"><a href="#" rel="tooltip" title="Escriba en mayúsculas" data-placement="right"> <? echo Form::text('proveedores.direccion', 'class="input-large" placeholder="Dirección"') ?></div></a>
                         <div class="control-group"> <a href="#" rel="tooltip" title="Solo números" data-placement="right"><? echo Form::text('proveedores.celular', 'class="input-large" placeholder="Celular"') ?></div></a>
                         <div class="control-group"><a href="#" rel="tooltip" title="nombre@correo.com" data-placement="right"> <? echo Form::text('proveedores.email', 'class="input-large" placeholder="Email"') ?></div></a>
@@ -46,7 +76,7 @@
                         <div><? echo Form::label("Ciudad:", "proveedores.ciudad_id") ?></div>
                         <? echo Form::dbSelect('ciudad.ciudad_id', 'nombre'); ?><!-- modelo . campo relacionado -->
                         <div class="control-group"><a href="#" rel="tooltip" title="Clave de acceso" data-placement="right"> <? echo Form::pass('proveedores.clave', 'class="input-large" placeholder="Contraseña"') ?></div></a>
-                      
+
                     </div>
                 </div>
             </div>
@@ -77,14 +107,11 @@
                 <div class="span10">
 
                     <br>
+                    <div>Razón social</div>
                     <div class="control-group"><a href="#" rel="tooltip" title="Razón social o nombre de empresa" data-placement="right"> <?php echo Form::text('proveedores.razonsocial', 'class="input-large" placeholder="Nombre o razón social"') ?></div></a>
+                    <div>RUT</div>
                     <div class="control-group"><a href="#" rel="tooltip" title="Registro Unico Tributario" data-placement="right"> <?php echo Form::text('proveedores.rut', 'class="input-large" placeholder="Rut"') ?></div></a>
-                    <div>Fecha matrícula de Cámara de Comercio</div>
-                    <div ><?php echo Form::date('proveedores.camcomfecfin', 'class="input-large" placeholder="Día/Mes/Año"') ?></div>
-                    <div>Tipo entidad</div>
-                    <div> <? echo Form::dbSelect('tipo_entidad.tipo_entidad_id', 'nombre'); ?></div>
-                    <div>Tipo proveedor: </div>
-                    <div><? echo Form::dbSelect('tipo_proveedor.tipo_proveedor_id', 'nombre'); ?></div>
+                    
                     <div class="control-group"> <?php echo Form::textarea('proveedores.portafolio', 'class="input-xlarge" placeholder="Portafolio"') ?></div>
                 </div>
             </div>

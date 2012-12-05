@@ -172,7 +172,7 @@ class AdminController extends ApplicationController {
             $proveedor->tipo_identificacion_id = $tid["tipo_identificacion_id"];
             $proveedor->ciudad_id = $tci["ciudad_id"];
             $proveedor->tipo_entidad_id = $ten["tipo_entidad_id"];
-            $proveedor->tipo_proveedor_id = $tpr["tipo_proveedor_id"];
+            $proveedor->tipo_proveedor_id = "3";
             $proveedor->tipousuario_id = "2";
 
             if ($proveedor->save()) {
@@ -207,7 +207,7 @@ class AdminController extends ApplicationController {
             $proveedor->tipo_identificacion_id = $tid["tipo_identificacion_id"];
             $proveedor->ciudad_id = $tci["ciudad_id"];
             $proveedor->tipo_entidad_id = $ten["tipo_entidad_id"];
-            $proveedor->tipo_proveedor_id = $tpr["tipo_proveedor_id"];
+            $proveedor->tipo_proveedor_id = "3";
 
 
             if ($proveedor->update()) {
@@ -336,6 +336,7 @@ class AdminController extends ApplicationController {
         }
     }
 
+    //asocia actividades antiguas a los proveedores
     function borrar() {
         Load::models("Antiguoactividad", "Actividad");
         $array = array();
@@ -443,9 +444,9 @@ class AdminController extends ApplicationController {
                             $array_usuarios[$i]['proveedores_id'] = $miContrato->proveedores_id;
                             if ($miContrato->count("numero=$miContrato->numero") == 0) {//si el contrato aun no existe
                                 if ($miContrato->save()) {
-                                    Flash::success("Exito. ". $miContrato->numero . "  " . $miContrato->proveedores_id);
+                                    Flash::success("Exito. " . $miContrato->numero . "  " . $miContrato->proveedores_id);
                                 } else {
-                                    Flash::error("Error. ". $miContrato->numero . "  " . $miContrato->proveedores_id);
+                                    Flash::error("Error. " . $miContrato->numero . "  " . $miContrato->proveedores_id);
                                 }
                             } else {
                                 Flash::info("No agregar " . $miContrato->numero . "  " . $miContrato->proveedores_id);
@@ -474,5 +475,14 @@ class AdminController extends ApplicationController {
             }
         }
     }
+
+    function reporteExcelContrato1() {
+        View::response("view");
+        Load::lib("PHPExcel/PHPExcel");
+       
+        
+        
+    }
+
 }
 ?>
