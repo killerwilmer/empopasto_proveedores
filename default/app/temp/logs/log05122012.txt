@@ -5,3 +5,858 @@
 [Wed, 05 Dec 12 09:10:03 -0500][DEBUG] DESCRIBE `proveedores`
 [Wed, 05 Dec 12 09:10:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores 
 [Wed, 05 Dec 12 09:10:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores LIMIT 10 OFFSET 0
+[Wed, 05 Dec 12 09:17:56 -0500][DEBUG] DESCRIBE `proveedores`
+[Wed, 05 Dec 12 09:20:19 -0500][DEBUG] DESCRIBE `proveedores`
+[Wed, 05 Dec 12 09:20:19 -0500][DEBUG] SELECT COUNT(*) FROM proveedores 
+[Wed, 05 Dec 12 09:20:19 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores LIMIT 10 OFFSET 0
+[Wed, 05 Dec 12 09:24:51 -0500][DEBUG] DESCRIBE `proveedores`
+[Wed, 05 Dec 12 09:24:51 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=(C) Cédula /nit Del Contratista
+[Wed, 05 Dec 12 09:24:51 -0500][ERROR] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Cédula /nit Del Contratista' at line 1 al ejecutar <em>"SELECT COUNT(*) FROM proveedores  WHERE identificacion=(C) Cédula /nit Del Contratista"</em>
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] DESCRIBE `proveedores`
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12960414
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98380122
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900377424
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201080
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12960414
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2326
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2326','ADQUISICION DE ELEMENTOS DE PAPELERIA PARA LAS DIFERENTES AREAS DE EMPOPASTO','1418825','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '1' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860042141
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200153
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2329
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2329','ADQUISICION DE ELEMENTOS DE CONSTRUCCION','260014','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '2' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860042141
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814006053
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2335
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2335','ADQUISICION DE ELEMENTOS PARA TALLER','291160','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '3' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2337
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2337','ADQUISICION ELEMENTOS DE CONSTURUCCION','2398827','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '4' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900245125
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201317
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814004518
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=87064905
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814006664
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=814006664 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2343
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2343','ADQUISICION DE REPUESTOS PARA MANTENIMIENTO CORRECTIVO Y PREVENTIVO EN LAS MOTOTOCICLETAS DE PROPIEDAD DE EMPOPASTO S.A. E.S.P.','2642950','1969-12-31 0:00:00','1969-12-31 0:00:00','100','205','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '5' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=830144460
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2345
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2345','ADQUISICION MATERIALES DE CONSTRUCCION','760960','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '6' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2347
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2347','ADQUISICION DE ELEMENTOS DE PAPELERIA','1988240','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '7' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961765
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12961765 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2350
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2350','ADQUISICION DE REPUESTOS PARA MANTENIMIENTO CORRECTIVO Y PREVENTIVO EN LAS MOTOTOCICLETAS DE PROPIEDAD DE EMPOPASTO S.A. E.S.P.','338000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','43','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '8' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2352
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2352','ADQUISICION DE CAMARAS DIGITALES DE ALTA RESOLUCION PARA REALIZAR TOMAS FOTOGRAFICAS DENTRO DE PROCESOS NECESARIOS PARA LA EMPRESA','446600','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '9' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=5203222
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=5203222 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2354
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2354','ADQUISICION DE CINTA ELECTRICA DE PVC PARA MANTENIMIENTO DE EQUIPO VIDEOSONDA','479996','1969-12-31 0:00:00','1969-12-31 0:00:00','100','161','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '10' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200488
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=891200488 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2355
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2355','DEBIDO A LA TORMENTA ELECTRICA PRESENTADA EN ESTA CIUDAD EL DIA MIERCOLES 16 DEL PRESENTE MES, SE PRESENTO UN DANO EN EL VARIADOR MARCA SIEMENS, MODELO 420, 75KW Y 3.9 AMPERIOS, DE LA BOMBA DOSIFICADORA DE SULFATO N.2 EL CUAL SE HACE URGENTE REPONERLO PARA TENER RESPALDO','997600','1969-12-31 0:00:00','1969-12-31 0:00:00','100','224','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '11' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2358
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2358','ADQUISICION DE HERRAMIENTAS','906714','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '12' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200024
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12970728
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12970728 LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2362
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2362','ADQUISICION DE ELEMENTOS PARA INSTALACION DE TAPAS EN VARIOS SECTORES DE LA CIUDAD','2400000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','53','2011')
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '13' LIMIT 1
+[Wed, 05 Dec 12 09:26:01 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2364
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2364','ADQUISICION DE ELEMENTOS PARA LA CONSTRUCCION','1635832','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '14' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900153981
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2368
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2368','ADQUISICION DE MATERIALES PARA LA CONSTRUCCION','1893700','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '15' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890316233
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12953678
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12953678 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2370
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2370','ADQUISICION DE COMBUSTIBLE PARA CUBRIR PLAN DE CONTINGENCIA ','241010','1969-12-31 0:00:00','1969-12-31 0:00:00','100','18','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '16' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=5275357
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=5275357 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2371
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2371','ADQUISICION DE MATERIALES (EN HORARIO NOCTURNO) PARA LA REPOSICION DE LA ESTRUCTURA DE PAVIMENTO INTERVENIDA POR LA REPARACION DEL DANO EN EL SISTEMA DE ACUEDUCTO EN LA RED MATRIZ DE TUBERIA HF DIAMETRO 10\" LOCALIZACION AVENIDA BOYACA CON CARRERA 16','12900744','1969-12-31 0:00:00','1969-12-31 0:00:00','100','165','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '17' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12751084
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12751084 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2372
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2372','ADQUISICION ELEMENTOS PARA CONSTRUCCION GALPONES','14269100','1969-12-31 0:00:00','1969-12-31 0:00:00','100','30','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '18' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2375
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2375','ADQUISICION DE MATERIALES PARA CONSTRUCCION','3387200','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '19' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860030360
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=27094552
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=27094552 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2378
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2378','ADQUISICION DE MATERIALES PARA CONSTRUCCION','5245926','1969-12-31 0:00:00','1969-12-31 0:00:00','100','119','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '20' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12974166
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12974166 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2380
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2380','ADQUISICION PLANTA TELEFONICA SEDE MIJITAYO','13500000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','52','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '21' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200024
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200488
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=891200488 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2382
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2382','ADQUISICION DE ELEMENTOS PARA MEDICION DE CORRIENTE ELECTRICA EN BOCATOMA BUESAQUILLO Y MACROMEDICION EN TUBERIA LOTE PARQUE BOLIVAR','1422000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','224','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '22' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969850
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969850 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2383
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2383','ADQUISICION DE INSUMOS DE PAPELERIA PARA OFICINA','2958000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','37','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '23' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900153981
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900245125
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860075590
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=860075590 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2387
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2387','ADQUISICION DE ELEMENTOS PARA CONSTRUCCION GALPONES','2086202','1969-12-31 0:00:00','1969-12-31 0:00:00','100','218','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '24' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2389
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2389','ADQUISICION DE MATERIALES PARA CONSTRUCCION','4051358','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '25' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=811038064
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800018856
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2393
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2393','ADQUISICION DE MATERIALES PARA LA FABRICACION DE REJILLA SECTOR MIJITAYO','1270780','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '26' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2394
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2394','ADQUISICION DE REACTIVOS QUIMICOS Y MATERIALES PARA ANALISIS DE LABORATORIO','2248080','1969-12-31 0:00:00','1969-12-31 0:00:00','100','66','2011')
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '27' LIMIT 1
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900153981
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=7223832
+[Wed, 05 Dec 12 09:26:02 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969041
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969041 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2399
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2399','COMPRA DE ELEMENTOS PARA LA ILUMINACION DE LA EMPRESA','4472032','1969-12-31 0:00:00','1969-12-31 0:00:00','100','38','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '28' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200488
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=891200488 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2400
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2400','COMPRA DE ELEMENTOS PARA LA ILUMINACION DE LA EMPRESA','1084870','1969-12-31 0:00:00','1969-12-31 0:00:00','100','224','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '29' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12953678
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12953678 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2401
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2401','ADQUISICION DE COMBUSTIBLE PARA EMERGENCIA HIDRAULICA','137720','1969-12-31 0:00:00','1969-12-31 0:00:00','100','18','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '30' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2405
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2405','ADQUISICION MATERIALES DE CONSTRUCCION','770588','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '31' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12987362
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12975282
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12975282 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2407
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2407','ADQUISICION ELEMENTOS PARA PROYECTO PRODUCTIVO','2943500','1969-12-31 0:00:00','1969-12-31 0:00:00','100','62','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '32' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=830065609
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900153981
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=15812847
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=15812847 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2411
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2411','CONTINUIDAD EN IMPLEMENTACION DEL PROGRAMA DE ASEGURAMIENTO DE LA CALIDAD DENTRO DEL LABORATORIO','1260000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','106','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '33' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900153981
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=15812847
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=15812847 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2413
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2413','SUMINISTRO DE EQUIPOS Y ACCESORIOS FALTANTES PARA EL PERSONAL CONTRATADO DE LA OFICINA DEL GRUPO COORDINADOR DE PROYECTOS ESPECIALES DEL PROGRAMA DE AGUA POTABLE Y SANEAMIENTO PARA PASTO PAPS','2149880','1969-12-31 0:00:00','1969-12-31 0:00:00','100','106','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '34' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=87247916
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800240367
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30723945
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900072404
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2421
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2421','DAR CUMPLIMIENTO A LA NORMATIVIDAD VIGENTE ESTATUTO DE SEGURIDAD INDUSTRIAL 2400 DE 1979 TITUTO IV DE LA ROPA DE TRABAJO.ARTICULO 170 EQUIPOS Y ELEMENTOS DE SEGURIDAD INDIUSTRIAL NORMA TECNICA COLOMBIANA NTC 45 33','9674690','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '35' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2422
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2422','PARA GARANTIZAR EL NORMAL FUNCIONAMIENTO DE LOS CLORADORES INSTALADOS EN LAS PLANTAS DE TRATAMIENTO, SE REQUIERE MANTENER UN STOCK DE EXTENSIONES FLEXIBLES PARA SU REPOSICION EN EL MOMENTO DEL CAMBIO DE LOS CILINDROS O TAMBORES DE CLORO','5916000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','66','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '36' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12751084
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12751084 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2424
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2424','ADQUISICION DE MADERA PARA LA PRESENTE VIGENCIA','4955810','1969-12-31 0:00:00','1969-12-31 0:00:00','100','30','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '37' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30735307
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=30735307 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2425
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2425','SUMINISTRO DE DOTACION PARA DAR CUMPLIMIENTO A LA NORMATIVIDAD LABORAL Y CONVENCIONAL VIGENTE ','16053600','1969-12-31 0:00:00','1969-12-31 0:00:00','86','142','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '38' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12962269
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12962269 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2426
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2426','ADQUISICION DE KIT HERRAMIENTAS PARA LECTOR','926028','1969-12-31 0:00:00','1969-12-31 0:00:00','100','39','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '39' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=79627645
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=79627645 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2427
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2427','DAR CUMPLIMIENTO A LA NORMATIVIDAD VIGENTE ESTATUTO DE SEGURIDAD INDUSTRIAL 2400 DE 1979 TITUTO IV DE LA ROPA DE TRABAJO.ARTICULO 170 EQUIPOS Y ELEMENTOS DE SEGURIDAD INDIUSTRIAL NORMA TECNICA COLOMBIANA NTC 45 33','2800000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','192','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '40' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12968862
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800226360
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=36992485
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969850
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969850 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2432
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2432','ADQUISICION DE THONERS PARA LA PRESENTE VIGENCIA','9932036','1969-12-31 0:00:00','1969-12-31 0:00:00','100','37','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '41' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=36755707
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=36755707 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2433
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2433','SUMINISTRO DE DOTACION PARA DAR CUMPLIMIENTO A LA NORMATIVIDAD LABORAL Y CONVENCIONAL VIGENTE PARA EL GRUPO 1 ADMINISTRATIVO FEMENINO','3600000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','151','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '42' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800018856
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=19237768
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=19237768 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2435
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2435','SUMINISTRO DE DOTACION PARA DAR CUMPLIMIENTO A LA NORMATIVIDAD LABORAL Y CONVENCIONAL VIGENTE PARA EL GRUPO 3 OPERATIVO, 4 ADMINISTRATIVO','14796000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','116','2011')
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '43' LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=27094552
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=27094552 LIMIT 1
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2436
+[Wed, 05 Dec 12 09:26:03 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2436','ADQUISICION DE ELEMENTOS DE PVC BAJO EL SISTEMA DE PRECIOS UNITARIOS FIJOS Y ENTREGAS PARCIALES CUMPLIENDO CON LAS NORMAS DE CALIDAD Y TECNICAS ESTABLECIDAS','9784244','1969-12-31 0:00:00','1969-12-31 0:00:00','100','119','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '44' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12987362
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=811038064
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30745077
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2441
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2441','ADQUISICION ELEMENTOS DE PAPELERIA','13129578','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '45' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12960193
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12960193 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2442
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2442','ADQUISICION ELEMENTOS DE PAPELERIA','2063252','1969-12-31 0:00:00','1969-12-31 0:00:00','100','17','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '46' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12960193
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12960193 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2443
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2443','ADQUISICION ELEMENTOS DE PAPELERIA','999830','1969-12-31 0:00:00','1969-12-31 0:00:00','100','17','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '47' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900386756
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=830144460
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860024730
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=830144460
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=830144460
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12751084
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12751084 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2451
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2451','ADQUISICION ELEMENTOS PARA CONSTRUCCION GALPONES','16045950','1969-12-31 0:00:00','1969-12-31 0:00:00','100','30','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '48' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=830041403
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900233290
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860004137
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=25164469
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=25164469 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2463
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2463',' Suministro en la ciudad de Pasto - PTAP Centenario de cincuenta (50) unidades de FALSOS FONDOS TIPO LEOPOLD en arcilla vitrificada para filtros de alta tasa, con las siguientes dimensiones: 0,60mts de largo X  0,28mts ancho X 0,25mts de alto, con un peso promedio de 38 Kgs.','3132000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','121','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '49' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2465
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2465','ADQUISICION DE ELEMENTOS PARA TRANSPORTE DE MUESTRAS DESDE EL AREA DE REFRIGERACION HASTA EL AREA DE ANALISIS Y TRANSPORTE DE REACTIVOS DESDE EL AREA DE ALMACENAMIENTO HASTA EL AREA DE PESAJE Y PREPARACION Y POSICION ERGONOMICA ADECUADA AL MOMENTO DE REALIZAR LOS ANALISIS DENTRO DEL LABORATORIO','1994620','1969-12-31 0:00:00','1969-12-31 0:00:00','100','66','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '50' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=14947081
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2467
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2467','Adquisicion de elementos  de construccion ','1728980','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '51' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=16681487
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=16681487 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2469
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2469','Se hace necesario la compra de una impresora para la Subgerencia Comercial','2200000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','108','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '52' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=19237768
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=19237768 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2472
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2472','Adquisicion de dotacion para personal de Empopasto S.A. E.S.P.','824470','1969-12-31 0:00:00','1969-12-31 0:00:00','100','116','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '53' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2473
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2473','Compra de papeleria para la construccion de expedientes de suscriptores','4045120','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '54' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98394777
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=98394777 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2475
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2475','SUMINISTRO DE DOTACION PARA DAR CUMPLIMIENTO A AL NORMATIVIDAD LABORAL Y CONVENCIONAL VIGENTE PARA EL GRUPO 1 ADMINISTRATIVO FEMENINO TERMINO FIJO','1040520','1969-12-31 0:00:00','1969-12-31 0:00:00','100','255','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '55' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900233290
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98389094
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12970728
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12970728 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2478
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2478','Se hace necesario la compra de un remolque tipo estacas para el transporte de un equipo de soldadura autogenerador y complementarios.','3100100','1969-12-31 0:00:00','1969-12-31 0:00:00','100','53','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '56' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12953678
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12953678 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2480
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2480','ADQUISICION DE COMBUSTIBLE PARA EMERGENCIA HIDRAULICA','516600','1969-12-31 0:00:00','1969-12-31 0:00:00','100','18','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '57' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=805030830
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800220247
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800051319
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=36953996
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=36953996 LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2484
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2484','ADQUISICION DE UN EQUIPO DISPENSADOR DE TURNO MANUAL Y PAPEL PARA SU UTILIZACION, EL CUAL SERA INSTALADO EN ATENCION AL CLIENTE DEL AREA COMERCIAL','1566000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','159','2011')
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '58' LIMIT 1
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200024
+[Wed, 05 Dec 12 09:26:04 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900245125
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900245125
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200024
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2490
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2490','SUMINISTRO DE CEMENTO PARA LA PRESENTE VIGENCA','3749700','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2011')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '59' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30745077
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30745077
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200727
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900153981
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969850
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969850 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2498
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2498','Adquisicion de 2 computadores de escritorio, un scaner y dos licencias','898600','1969-12-31 0:00:00','1969-12-31 0:00:00','100','37','2011')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '60' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900245125
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969041
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969041 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2500
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2500','SUMINISTRO DE LAMPARAS TIPO APLIQUE - EXTERIOR - INDUSTRIAL PARA ZONA DE FILTROS ALTA TAS Y LAMPARAS TIPO OPSTE EXTERIOR CON PROTECCION PARA ZONA DE FILTROS DE AUTOLAVADO, CANALETA PARSCHALL Y SEDIMENTADORES DE LA PTAP CENTENARIO, INCLUYE BOBILLERIA LUZ BLANCA - AHORRADORA DE ENERGIA ELECTRICA','3879040','1969-12-31 0:00:00','1969-12-31 0:00:00','71','38','2011')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '61' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12986799
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12986799 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2502
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2502','ADQUISICION DE PUESTOS DE TRABAJO Y DEVISIONES DE OFICINA PARA LAS DIFERENETES SEDES DE EMPOPASTO S.A. E.S.P.','15882488','1969-12-31 0:00:00','1969-12-31 0:00:00','100','75','2011')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '62' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=10515768
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=10515768 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2503
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2503','ADQUISICION DE MATERIALES DE RELLENO','756378','1969-12-31 0:00:00','1969-12-31 0:00:00','100','8','2011')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '63' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800136972
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=800136972 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2505
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2505','SUMINISTRO DE ELEMENTOS PARA MANTENIMIENTO DE LA VIDEO SONDA MARCA CUES','6150320','1969-12-31 0:00:00','1969-12-31 0:00:00','100','195','2011')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '64' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12987362
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=10515768
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=10515768 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2508
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2508','Adquisicion materiales de relleno','1836960','1969-12-31 0:00:00','1969-12-31 0:00:00','100','8','2012')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '65' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12974166
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12974166 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2511
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2511','SUMINISTRO DE MATERIALES QUE SERAN UTILIZADOS EN LA REPOSICION DE LA ACOMETIDA EXISTENTE DE LOS SISTEMAS DE VOZ Y DATOS','995500','1969-12-31 0:00:00','1969-12-31 0:00:00','100','52','2012')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '66' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2512
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2512','SUMINISTRO DE MATERIALES QUE SERAN UTILIZADOS EN LA REPOSICION DE LA ACOMETIDA EXISTENTE DE LOS SISTEMAS DE VOZ Y DATOS  BLOQUES I Y II, SEDE MIJITAYO','1251640','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '67' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800002030
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2514
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2514','Adquisicion de materiales para construccion','2217900','1969-12-31 0:00:00','1969-12-31 0:00:00','100','32','2012')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '68' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969850
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969850 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2515
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2515','Adquisicion de thoners para el primer trimestre del ańo 2012 para el funcionamiento de las oficinas de EMPOPASTO S.A. E.S.P.','9529980','1969-12-31 0:00:00','1969-12-31 0:00:00','100','37','2012')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '69' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2518
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2518','Adquisicion de elementos de construccion.','5591200','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '70' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2519
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2519','Adquisicion de elementos de construccion.','7799840','1969-12-31 0:00:00','1969-12-31 0:00:00','100','32','2012')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '71' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969850
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969850 LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2520
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2520','Adquisicion de elementos de papeleria para el primer trimestre del ańo 2012 para el funcionamiento de las oficinas de Empopasto S.A. E.S.P.','828762','1969-12-31 0:00:00','1969-12-31 0:00:00','100','37','2012')
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '72' LIMIT 1
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:05 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2521
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2521','Adquisicion de elementos de papeleria para el primer trimestre del ańo 2012 para el funcionamiento de las oficinas de Empopasto S.A. E.S.P.','1071231','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '73' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=87070526
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200162
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=891200162 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2523
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900348549
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900348549 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2525
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2525','Suministro de elementos de aseo y cafeteria','526600','1969-12-31 0:00:00','1969-12-31 0:00:00','100','233','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '74' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891224440
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969850
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969850 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2529
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2529','COMPRA DE EQUIPOS TELEFONICOS PARA LAS DIFERENTES SEDES DE EMPOPASTO S.A. E.S.P.','1155360','1969-12-31 0:00:00','1969-12-31 0:00:00','100','37','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '75' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12974166
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12974166 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2531
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2531','ADQUISICION DE MEMORIAS USB Y CARGADOR DE PORTATIL PARA FUNCIONAMIENTO ADECUADO DE LOS EQUIPOS DE LA EMPRESA.','136000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','52','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '76' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2532
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2532','Adquisición de elementos de madera.','2427880','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '77' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98379183
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=98379183 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2533
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2533','ADQUISICION DE MATERIALES DE RELLENO','1078000.2','1969-12-31 0:00:00','1969-12-31 0:00:00','100','239','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '78' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2534
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2534','COMPRA DE PAPEL PARA FOTOCOPIADORA 75 GRAMOS Y DE UN ESTABILIZADOR DE 3000 ISOLADO COMO SUMINISTRO PARA EL FUINCIONAMIENTO DEL EQUIPO DE FOTOCOPIADO A RECIBIR POR PARTE DE EMPOPASTO EN CALIDAD DE CONTRATO DE ARRENDAMIENTO.','3984600','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '79' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12992846
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890300225
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2538
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2538','ADQUISICION DE HERRAMIENTAS PARA ATENDER LOS DAŃOS OCASIONADOS EN ACUEDUCTO Y ALCANTARILLADO DE LA CIUDAD','2146000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '80' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200024
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2541
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2541','ADQUISICION DE MATERIALES PARA ARREGLOS DE ACUEDUCTO Y ALCANTARILLADO DE LA CIUDAD DE PASTO','8265000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','32','2012')
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '81' LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98382921
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12970728
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12970728 LIMIT 1
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2545
+[Wed, 05 Dec 12 09:26:06 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2545','Adquisición de aros y contraros para reposición de tapas camara de alcantarillado.','5210000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','53','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '82' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891224440
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200153
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900245125
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2550
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2550','COMPRA DE HIDRANTES PARA LA SECCION OPERATIVA DE REDES','9972580','1969-12-31 0:00:00','1969-12-31 0:00:00','100','32','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '83' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2551
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2551','Adquisición de duela para reparaciones varias.','209844','1969-12-31 0:00:00','1969-12-31 0:00:00','100','32','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '84' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30708828
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2554
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2554','ADQUISICION  REACTIVOS  PARA LA EJECUCIÓN DE ANÁLISIS FISICOQUÍMICOS, MICROBIOLÓGICOS Y PARASITOLÓGICOS EN AGUA CRUDA, EN PROCESO, TRATADA Y RESIDUAL, PARA EL CONTROL DE CALIDAD DEL AGUA NECESARIO PARA DAR CUMPLIMIENTO A LAS EXIGENCIAS NORMATIVAS LEGALES VIGENTES.','13312160','1969-12-31 0:00:00','1969-12-31 0:00:00','Vigente','66','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '85' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2557
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2557','Adquisición de elementos para el mantenimiento de paredes en plantas de tratamientos.','786190','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '86' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800226360
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2559
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2559','ADQUISICIÓN DE ACETATOS PARA PROTECCIÓN DE DOCUMENTOS','178640','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '87' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2560
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2560','ADQUISICIÓN DE ELEMENTOS DE FERRETERÍA','736600','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '88' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969041
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969041 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2561
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2561','Suministro de elementos electricos para ser utilizados en el  mantenimiento de los sistemas de iluminación de las instalaciones de la Empresa EMPOPASTO S.A.E.S.P.','7511406','1969-12-31 0:00:00','1969-12-31 0:00:00','Vigente','38','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '89' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2563
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2563','Adquisición de elementos de seguridad industrial','1435500','1969-12-31 0:00:00','1969-12-31 0:00:00','100','111','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '90' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2564
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2564','ADQUISICIÓN DE MATERIALES PARA ARREGLOS DE ACUEDUCTO Y ALCANTARILLADO DE LA CIUDAD DE PASTO','1363520','1969-12-31 0:00:00','1969-12-31 0:00:00','100','32','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '91' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2565
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2565','ADQUISICIÓN DE MATERIALES PARA ARREGLOS DE ACUEDUCTO Y ALCANTARILLADO DE LA CIUDAD DE PASTO','1834540','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '92' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200153
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900348549
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900348549 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2568
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2568','Suministro de elementos de aseo y cafeteria','240120','1969-12-31 0:00:00','1969-12-31 0:00:00','100','233','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '93' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12960193
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12960193 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2570
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2570','ADQUISICION DE ELEMENTOS DE PAPELERIA PARA EL FUNCIONAMIENTO DE LAS OFICINAS DE EMPOPASTO S.A. E.S.P.','1301047','1969-12-31 0:00:00','1969-12-31 0:00:00','100','17','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '94' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2571
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2571','Suministro de incubadora modelo 205, con tarjeta de procesamiento principal y de control, tarjeta de potencia, sistema de calentamiento con resistencia 44,6 omnios, sistema automático de enfriamiento y termostato de limite alto. Desplay electrónico, ventilador para circulación de aire de cámara, piloto de calentamiento y piloto de límite alto, sensor de temperatura con capacidad de almacenar hasta 58 winkler de 300 ml altura(4.0 ft3)','9441240','1969-12-31 0:00:00','1969-12-31 0:00:00','100','66','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '95' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=87070526
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2573
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2573','Adquisición materiales de ferretería.','6986100','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '96' LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2575
+[Wed, 05 Dec 12 09:26:07 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2575','Adquisición de teja para el almacenamiento de elementos y materiales de construcción','1730024','1969-12-31 0:00:00','1969-12-31 0:00:00','100','32','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '97' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=59825576
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=59825576 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2578
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2578','Adquisición de implementos deportivos','582900','1969-12-31 0:00:00','1969-12-31 0:00:00','100','190','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '98' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=59825576
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=59825576 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2579
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2579','Adquisición de implementos deportivos.','997948','1969-12-31 0:00:00','1969-12-31 0:00:00','100','190','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '99' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900260602
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200651
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2582
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12986799
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12986799 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2584
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2584','Adquisición de  persianas para proteger la integridad de los documentos de la luz y las personas del Centro de Documentación, Jefatura Operativa de Redes,subgerencia de Operaciones y laboratorio de medidores.   ','2099977','1969-12-31 0:00:00','1969-12-31 0:00:00','100','75','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '100' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98382921
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12987362
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2587
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2587','Adquisición de teja para el almacenamiento de elementos y materiales de construcción','519007.2','1969-12-31 0:00:00','1969-12-31 0:00:00','100','32','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '101' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30708828
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2591
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2591','ADQUISICION  MATERIALES DE LABORATORIO  PARA LA EJECUCIÓN DE ANÁLISIS FISICOQUÍMICOS, MICROBIOLÓGICOS Y PARASITOLÓGICOS EN AGUA CRUDA, EN PROCESO, TRATADA Y RESIDUAL, PARA EL CONTROL DE CALIDAD DEL AGUA NECESARIO PARA DAR CUMPLIMIENTO A LAS EXIGENCIAS NORMATIVAS LEGALES VIGENTES.','4180060','1969-12-31 0:00:00','1969-12-31 0:00:00','Vigente','66','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '102' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2592
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2592','ADQUISICION  MATERIALES DE LABORATORIO  PARA LA EJECUCIÓN DE ANÁLISIS FISICOQUÍMICOS, MICROBIOLÓGICOS Y PARASITOLÓGICOS EN AGUA CRUDA, EN PROCESO, TRATADA Y RESIDUAL, PARA EL CONTROL DE CALIDAD DEL AGUA NECESARIO PARA DAR CUMPLIMIENTO A LAS EXIGENCIAS NORMATIVAS LEGALES VIGENTES.','12609200','1969-12-31 0:00:00','1969-12-31 0:00:00','Vigente','66','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '103' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900164964
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201317
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2595
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2595','Adquisición de elemento de ferretería','990640','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '104' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2597
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2597','Compra de pintura esmaltada para trabajos de la sección de redes.','363776','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '105' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2598
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2598','Adquisición de papelería para satisfacer las necesidades de la empresa.','337004','1969-12-31 0:00:00','1969-12-31 0:00:00','92','111','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '106' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890300225
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=6388008
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=87070526
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12974166
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12974166 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2604
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2604','Adquisición de un amplificador para el televisor ubicado en la oficina de atención de Peticiones, Quejas y Reclamos en la empresa.','546000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','52','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '107' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98382921
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860012336
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891201261
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=87070526
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2610
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2610','Adquisición de cepillos industriales para lavado de tanques.','174000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','238','2012')
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '108' LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900153981
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30708828
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30708828
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2614
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12981032
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12981032 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2615
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=85449720
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=814002348
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12974166
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12974166 LIMIT 1
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2622
+[Wed, 05 Dec 12 09:26:08 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2622','Adquisición de digiturno para el control de filas para la oficina de atención de Peticiones, quejas y reclamos.','950000','1969-12-31 0:00:00','1969-12-31 0:00:00','100','52','2012')
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '109' LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=85449720
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900227384
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860030360
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=59823201
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=1793493
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=1793493 LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2635
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2635','Adquisicion de elementos de papeleria  para el funcionamiento de las Oficinas de Empopasto S.A E.S.P.','862690.00','1969-12-31 0:00:00','1969-12-31 0:00:00','92','111','2012')
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '110' LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=14947081
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=860028580
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12960520
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12960520 LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2638
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2638','Adquisición de papelería preimpresa para el área comercial','1300128.00','1969-12-31 0:00:00','1969-12-31 0:00:00','100','24','2012')
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '111' LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12953678
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12953678 LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2639
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2639','Adquisición de elementos para el cuidado y mantenimiento del equipo de transporte de EMPOPASTO S.A. E.S.P.','1748120.00','1969-12-31 0:00:00','1969-12-31 0:00:00','100','18','2012')
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '112' LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12974462
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900475350
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969850
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969850 LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2642
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2642','Adquisición de elementos de seguridad industrial','5429235.00','1969-12-31 0:00:00','1969-12-31 0:00:00','100','37','2012')
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '113' LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=27094552
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=27094552 LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2643
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2643','ADQUISICIÓN DE MATERIALES PARA ARREGLOS EN EL ACUEDUCTO Y ALCANTARILLADO DE LA CIUDAD DE PASTO','12130300.00','1969-12-31 0:00:00','1969-12-31 0:00:00','Vigente','119','2012')
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '114' LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12974462
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890300225
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900461641
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900461641 LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2647
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2647','ADQUISICIÓN DE HERRAMIENTAS PARA EL MANTENIMIENTO DE EQUIPOS Y ARREGLOS QUE SE REALIZAN EN EL ACUEDUCTO Y ALCANTARILLADO DE LA CIUDAD DE PASTO','2090088.00','1969-12-31 0:00:00','1969-12-31 0:00:00','83','238','2012')
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '115' LIMIT 1
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12961349
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=59823201
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900419293
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:09 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98399611
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98399611
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98382921
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12969850
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12969850 LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2656
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2656','Adquisicion de elementos de papeleria y materiales para llevar expedientes de suscriptores','3693378.00','1969-12-31 0:00:00','1969-12-31 0:00:00','100','37','2012')
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '116' LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12960193
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12960193 LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2657
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2657','Adquisición de elementos de papelería','991182.00','1969-12-31 0:00:00','1969-12-31 0:00:00','100','17','2012')
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '117' LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=14947081
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=19237768
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=19237768 LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2660
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2660','De conformidad con la normatividad legal vigente se requiere realizar la adquisicion de la dotacion vigencia 2012, para los trabajadores a termino fijo grupo 3 Operativo  masculino.','4950900.00','1969-12-31 0:00:00','1969-12-31 0:00:00','94','116','2012')
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '118' LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98397809
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900348549
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900348549 LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2663
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2663','Suministro de elementos de aseo y cafeteria','4921500.00','1969-12-31 0:00:00','1969-12-31 0:00:00','100','233','2012')
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '119' LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98397809
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=19237768
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=19237768 LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2666
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2666','De conformidad con la normatividad legal vigente se requiere realizar la adquisicion de la dotacion vigencia 2012, para los trabajadores a termino fijo grupo 5 operativo  masculino.','1179900.00','1969-12-31 0:00:00','1969-12-31 0:00:00','83','116','2012')
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '120' LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900260602
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30723945
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98383086
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=19237768
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=19237768 LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2672
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2672','De conformidad con la normatividad legal vigente se realiza adquisicion de la dotacion vigencia 2012, para los trabajadores a termino fijo grupo 3 Semioperativo  masculino.','2134600.00','1969-12-31 0:00:00','1969-12-31 0:00:00','83','116','2012')
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '121' LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98397809
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=891200024
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98389094
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900386756
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=805017533
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900233290
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800097073
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=36992485
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=30723945
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=890900943
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900342297
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900342297
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98397809
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800097073
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=800097073
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=900348549
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=900348549 LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2688
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2688','Suministro de elementos de aseo y cafeteria','720800.00','1969-12-31 0:00:00','1969-12-31 0:00:00','100','233','2012')
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '122' LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=87070526
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12963567
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12963567 LIMIT 1
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2690
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=27094552
+[Wed, 05 Dec 12 09:26:10 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=27094552 LIMIT 1
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2691
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2691',' ADQUISICIÓN DE MATERIALES PARA ARREGLOS DE ACUEDUCTO Y ALCANTARILLADO DE LA CIUDAD DE PASTO','7295685.00','1969-12-31 0:00:00','1969-12-31 0:00:00','100','119','2012')
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '123' LIMIT 1
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=12970728
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores WHERE identificacion=12970728 LIMIT 1
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] SELECT COUNT(*) FROM contratos  WHERE numero=2692
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] INSERT INTO contratos (numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia) VALUES ('2692','Adquisición de aros y contraaros.','5800000.00','1969-12-31 0:00:00','1969-12-31 0:00:00','Vigente','53','2012')
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] SELECT id,numero,objeto,valorini,fechaini,fechafinal,puntaje,proveedores_id,vigencia FROM contratos WHERE id = '124' LIMIT 1
+[Wed, 05 Dec 12 09:26:11 -0500][DEBUG] SELECT COUNT(*) FROM proveedores  WHERE identificacion=98382921
+[Wed, 05 Dec 12 09:26:58 -0500][DEBUG] DESCRIBE `proveedores`
+[Wed, 05 Dec 12 09:26:58 -0500][DEBUG] SELECT COUNT(*) FROM proveedores 
+[Wed, 05 Dec 12 09:26:58 -0500][DEBUG] SELECT id,tipo_identificacion_id,identificacion,razonsocial,ciudad_id,nombres,apellidos,direccion,celular,email,telefono,fax,clave,profesion,portafolio,estado,tarjeta,rut,educacion,camcomfecini,camcomfecfin,actiecon,tipousuario_id,tipo_entidad_id,tipo_proveedor_id FROM proveedores LIMIT 10 OFFSET 0
