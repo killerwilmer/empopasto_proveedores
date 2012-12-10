@@ -318,18 +318,29 @@ class AdminController extends ApplicationController {
     }
 
     function reportepdf1() {
+        Load::lib("PHPExcel/PHPExcel");
 
-        View::response("view");
-        Load::lib("fpdf/fpdf");
+        if (isset($_SESSION['reporte'])) {
 
+            if (count($_SESSION['reporte']) > 0) {
 
-        if (Input::hasPost("id")) {
-
-            $this->matriz = Input::post("id");
-
-            foreach (Input::post("id") as $puesto => $val) {
-                
+                $this->matriz = $_SESSION['reporte'];
             }
+        } else {
+            Flash::error("No seleccionó ningún proveedor");
+            Router::redirect("admin/proveedores");
+        }
+    }
+
+    function reportepdftodos() {
+        Load::lib("PHPExcel/PHPExcel");
+
+        $prov = new Proveedores();
+        $arr = array();
+        $arr = $prov->find();
+
+        if (count($arr) > 0) {
+            $this->matriz = $arr;
         } else {
             Flash::error("No seleccionó ningún proveedor");
             Router::redirect("admin/proveedores");
@@ -476,9 +487,58 @@ class AdminController extends ApplicationController {
         }
     }
 
-    function reporteExcelContrato1() {
-        //View::response("view");
+    //saca en excel los contratos del proveedor seleccionado
+    function repExContratoProv($idproveedor) {
         Load::lib("PHPExcel/PHPExcel");
+        $con = new Contratos();
+        $this->arr = array();
+        $this->arr = $con->getRepProveedor($idproveedor);
+    }
+
+    function repExProv($idproveedor) {
+        Load::lib("PHPExcel/PHPExcel");
+        $pro = new Proveedores();
+        $this->arr = array();
+        $this->arr = $pro->getRepExProv($idproveedor);
+        $con = new Contratos();
+        $this->pond = $con->getPonderadoPorProveedor($idproveedor);
+    }
+
+    function repExProvVertical($idproveedor) {
+        View::template("asistente/default_ribbon");
+        Load::models("actividad", "division", "seccion", "proveedores", "tipo_identificacion", "tipo_entidad", "ciudad", "contratos");
+        Load::lib("PHPExcel/PHPExcel");
+        $this->obj = new Proveedores();
+        $this->obj->find_first($idproveedor);
+
+        $ap = new ActividadHasProveedores();
+        $this->actividades = array();
+        $this->actividades = $ap->find("proveedores_id=$idproveedor");
+    }
+
+    function guardartemp() {
+        Load::lib("PHPExcel/PHPExcel");
+
+        if (Input::hasPost("id")) {
+
+            $this->matriz = Input::post("id");
+
+            foreach (Input::post("id") as $puesto => $val) {
+                $_SESSION['reporte'][] = $val;
+            }
+
+            Flash::success("Almacenado correctamente en temporal.");
+            Router::redirect("admin/proveedores");
+        } else {
+            Flash::error("No seleccionó ningún proveedor");
+            Router::redirect("admin/proveedores");
+        }
+    }
+
+    function borrartemp() {
+        unset($_SESSION['reporte']);
+        Flash::success("Temporal eliminado");
+        Router::redirect("admin/proveedores");
     }
 
 }

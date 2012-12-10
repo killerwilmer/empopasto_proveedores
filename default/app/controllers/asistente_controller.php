@@ -157,6 +157,21 @@ class AsistenteController extends AppController {
             View::excepcion($e);
         }
     }
+    
+    function repExProvVertical(){
+        View::template("asistente/default_ribbon");
+        Load::models("actividad","division","seccion","proveedores","actividad_has_proveedores","tipo_identificacion","tipo_entidad","ciudad","contratos");
+        Load::lib("PHPExcel/PHPExcel");
+        $idproveedor = Session::get("idproveedor");
+        $this->obj = new Proveedores();
+        $this->obj->find_first($idproveedor);
+        
+        $ap = new ActividadHasProveedores();
+        $this->actividades = array();
+        $this->actividades = $ap->find("proveedores_id=$idproveedor");
+        
+        
+    }
 
 }
 

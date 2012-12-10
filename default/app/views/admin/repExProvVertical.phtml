@@ -1,0 +1,76 @@
+
+<?
+/* Here there will be some code where you create $objPHPExcel */
+
+$ruta = APP_PATH . "temp/templates_informes/template_registrointernoproveedores.xlsx";
+
+
+$objPHPExcel = PHPExcel_IOFactory::load($ruta);
+// Set properties
+$objPHPExcel->getProperties()->setCreator("Empopasto S.A")
+        ->setLastModifiedBy("Empopasto S.A")
+        ->setTitle("Reporte de proveedor")
+        ->setSubject("Reporte de proveedor")
+        ->setDescription("Reporte de proveedor")
+        ->setKeywords("reporte proveedor")
+        ->setCategory("Reportes");
+$objPHPExcel->getActiveSheet()->setTitle('Reporte proveedor');
+
+$objPHPExcel->setActiveSheetIndex(0);
+
+//fecha impresion
+$fecha = date("Ymdhis");
+$fecha_hoy = date("Y-m-d h:i:s");
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E9", $fecha_hoy);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E13", $obj->identificacion);
+$tip = new TipoIdentificacion();
+$tip->find_first($obj->tipo_identificacion_id);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E14",$tip->nombre);
+$top = new TipoEntidad();
+$top->find_first($obj->tipo_entidad_id);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E15",$top->nombre);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E16",$obj->razonsocial);
+$ciu = new Ciudad();
+$ciu->find_first($obj->ciudad_id);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E17",$ciu->nombre);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E18",$obj->direccion);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E19",$obj->email);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E20",$obj->telefono);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E21",$obj->fax);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E22",$obj->celular);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E23",$obj->nombres);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E24",$obj->apellidos);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E25",$obj->tarjeta);
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E26",$obj->rut);
+$con = new Contratos();
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue("E27",$con->getPonderadoPorProveedor($obj->id));
+
+$fila = 32;
+
+foreach ($actividades as $obj) {
+    $ac = new Actividad();
+    $ac->find_first($obj->id);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(3, $fila, $ac->nombre);
+    $div = new Division();
+    $div->find_first($ac->division_id);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(2, $fila, $div->nombre);
+    $sec = new Seccion();
+    $sec->find_first($div->seccion_id);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(1, $fila, $sec->nombre);   
+    $fila++;
+}
+
+$fila +=2;
+ $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(1, $fila, "Empresa de Obras sanitarias de Pasto - Empopasto S.A.E.S.P");  
+ $fila++;
+ $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(1, $fila, "Sede Administrativa Cr 24-21-40 Pasto -Colombia -www.empopasto.com.co");  
+
+
+$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+$nombre = 'reportes/MyExcelProvVertucal'.$fecha.'.xlsx';
+
+
+$objWriter->save("$nombre");    
+//$objWriter->save('php://output');
+echo "<a href='".PUBLIC_PATH.$nombre."'>Descargar reporte en Excel</a>";
+?>

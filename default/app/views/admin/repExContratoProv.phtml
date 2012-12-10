@@ -1,0 +1,61 @@
+
+<?
+/* Here there will be some code where you create $objPHPExcel */
+
+$ruta = APP_PATH . "temp/templates_informes/template_evaluacionproveedores.xlsx";
+
+
+$objPHPExcel = PHPExcel_IOFactory::load($ruta);
+// Set properties
+$objPHPExcel->getProperties()->setCreator("Empopasto S.A")
+        ->setLastModifiedBy("Empopasto S.A")
+        ->setTitle("Reporte de evaluación del proveedor")
+        ->setSubject("Reporte de evaluación del proveedor")
+        ->setDescription("Reporte de evaluación del proveedor")
+        ->setKeywords("reporte evaluación proveedor")
+        ->setCategory("Reportes");
+$objPHPExcel->getActiveSheet()->setTitle('Reporte');
+
+$objPHPExcel->setActiveSheetIndex(0);
+$fila = 7;
+
+$valores = 0;
+$parciales = 0;
+
+foreach ($arr as $obj) {
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(0, $fila, $obj->id);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(1, $fila, $obj->identificacion);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(2, $fila, $obj->razonsocial);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(3, $fila, $obj->numero);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(4, $fila, $obj->objeto);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(5, $fila, $obj->valorini);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(6, $fila, $obj->fechaini);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(7, $fila, $obj->fechafinal);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(8, $fila, $obj->puntaje);
+    $valores = $valores + $obj->valorini;
+    $parciales +=($obj->valorini * $obj->puntaje);
+    $fila++;
+}
+
+$fila+=2;
+
+$objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(4, $fila, "SUMATORIA VALORES CONTRATO");
+$objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(5, $fila, $valores);
+
+if ($valores > 0) {
+
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(7, $fila, "TOTAL PONDERADO");
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(8, $fila, round($parciales / $valores, 2));
+}
+
+
+$fecha = date("Ymdhis");
+
+$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+$nombre = 'reportes/MyExcel'.$fecha.'.xlsx';
+
+
+$objWriter->save("$nombre");    
+//$objWriter->save('php://output');
+echo "<a href='".PUBLIC_PATH.$nombre."'>Descargar reporte en Excel</a>";
+?>

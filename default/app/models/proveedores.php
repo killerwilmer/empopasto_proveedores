@@ -12,7 +12,7 @@
  */
 class Proveedores extends ActiveRecord {
 
-    public $logger=true;
+    public $logger=false;
     
     public function initialize() {
 
@@ -44,6 +44,16 @@ class Proveedores extends ActiveRecord {
         }
         $this->commit();
         return TRUE;
+    }
+    
+    function getRepExProv($idproveedor){
+        $sql = "select p.id,p.identificacion,p.razonsocial,p.nombres,p.apellidos,p.direccion,p.telefono,
+                p.celular,p.email,s.nombre as seccion,a.nombre as actividad,d.nombre as division
+                from proveedores p,actividad a,actividad_has_proveedores ap,division d,seccion s
+                where p.id=ap.proveedores_id and a.id=ap.actividad_id and a.division_id=d.id
+                and d.seccion_id=s.id and p.id=$idproveedor";
+        
+        return $this->find_all_by_sql($sql);
     }
 
 }

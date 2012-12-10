@@ -52,23 +52,29 @@
         </tr>
     </table>
 </div>
-<? echo Form::open("admin/reportepdf1") ?>
+<? echo Form::open("admin/guardartemp") ?>
 <div class="well" style="padding: 8px;border-radius: 2px;">
     <?
-    echo Form::label("Tipo de reporte:","comboBusqueda");
-    $comboBusqueda = array('CVS', 'PDF');
-    echo Form::select("comboBusqueda", $comboBusqueda, "CVS");
+    //echo Form::label("Tipo de reporte:","comboBusqueda");
+    //$comboBusqueda = array('CVS', 'PDF');
+    //echo Form::select("comboBusqueda", $comboBusqueda, "CVS");
     ?>
-    <? echo Form::submit("Crear reporte", "class='btn btn-danger'") ?>
+    <? echo Form::submit("Guardar temporal", "class='btn btn-info'") ?>
+    <? echo Html::link("admin/borrartemp", "Borrar temporal","class='btn btn-info'")?>
+    <? echo Html::link("admin/reportepdf1", "Enviar a excel (temporal)","class='btn btn-info'")?>
+    <? echo Html::link("admin/reportepdftodos", "Enviar a excel (todos)","class='btn btn-info'")?>
 </div>
 <?php
 $dt = new DataTable($proveedores);
-$dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social', 'Nombres', 'Apellidos', 'Direccion', 'Celular', 'Reporte', 'Editar', 'Actividades', 'Contratos', 'Eliminar');
-$dt->addFields('id', 'identificacion', 'razonsocial', 'nombres', 'apellidos', 'direccion', 'celular');
+$dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social', 'Nombres', 'Apellidos', 'Celular','Seleccionar', 'Editar', 'Actividades', 'Contratos', 'Imprimir','Rep.Datos','Eliminar');
+$dt->addFields('id', 'identificacion', 'razonsocial', 'nombres', 'apellidos',  'celular');
 $dt->check('id',null,1);
+
 $dt->imgLink('figuras/editar.png', 'admin/editarproveedor');
 $dt->imgLink('figuras/actividades.png', 'admin/actividades');
-$dt->imgLink('figuras/contrato.png', 'admin/ponderacion');
+$dt->imgLink('figuras/contract.png', 'admin/ponderacion');
+$dt->imgLink('figuras/contrato.png', 'admin/repExProv');
+$dt->imgLink('figuras/contrato.png', 'admin/repExProvVertical');
 $dt->imgLinkConfirm('figuras/eliminar.png', 'admin/eliminarproveedor', '', '¿Realmente desea Eliminar Este Proveedor?');
 echo $dt->render('class="table table-bordered table-striped"');
 ?>

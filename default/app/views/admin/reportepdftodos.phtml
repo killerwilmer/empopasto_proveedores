@@ -20,9 +20,9 @@ $objPHPExcel->getActiveSheet()->setTitle('Reporte proveedor');
 $objPHPExcel->setActiveSheetIndex(0);
 $fila = 7;
 
-for($i=0;$i<count($_SESSION['reporte']);$i++){
+for($i=0;$i<count($matriz);$i++){
 
-    $val = $_SESSION['reporte'][$i];
+    $val = $matriz[$i]->id;
     
     $pro = new Proveedores();
     $arr = array();
