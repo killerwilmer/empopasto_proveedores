@@ -9,7 +9,7 @@
  *
  * @author wilmerarteaga
  */
-Load::models('proveedores', 'contratos', 'Actividad_Has_Proveedores', 'contra');
+Load::models('proveedores', 'contratos', 'Actividad_Has_Proveedores', 'contra', 'seccion', 'division', 'actividad');
 View::template('admin/admin');
 
 class AdminController extends ApplicationController {
@@ -104,23 +104,81 @@ class AdminController extends ApplicationController {
             $pro = new Proveedores();
             $this->proveedores = $pro->paginar($pagina);
 
-            if (Input::hasPost("actividad")) {
-                $in = Input::post("actividad");
-                $idactividad = $in["actividad_id"];
+            if (Input::hasPost("seccion") && Input::hasPost("division")) {
 
-                $ac = new ActividadHasProveedores();
-                $arr = array();
-                $arr = $ac->find("actividad_id=$idactividad");
+                $in = Input::post("seccion");
+                $idseccion = $in["seccion_id"];
 
-                $this->proveedores = array();
-                $i = 0;
-                foreach ($arr as $obj) {
-                    $prov = new Proveedores();
-                    $x = $prov->find_first($obj->proveedores_id);
-                    $this->proveedores[$i] = $x;
-                    $i++;
+                $in = Input::post("division");
+                $iddivision = $in["division_id"];
+
+                if ($iddivision == '') {
+
+                    $ac = new ActividadHasProveedores();
+                    $arr = array();
+                    $arr = $ac->find_all_by_sql("select p.id as id from actividad_has_proveedores ap, 
+                        actividad a, proveedores p, seccion s, division d
+                        where ap.actividad_id=a.id and a.division_id = d.id
+                        and d.seccion_id = s.id and ap.proveedores_id=p.id
+                        and s.id = $idseccion");
+
+                    $this->proveedores = array();
+                    $i = 0;
+                    foreach ($arr as $obj) {
+                        $prov = new Proveedores();
+                        $x = $prov->find_first($obj->id);
+                        $this->proveedores[$i] = $x;
+                        $i++;
+                    }
+                    $sec = new Seccion();
+                    $sec->find_first($idseccion);
+                    Flash::info("Buscando por la sección:" . $sec->nombre);
+                } else {
+
+                    $in = Input::post("actividad");
+                    $idactividad = $in["actividad_id"];
+
+                    if ($idactividad == '') {
+
+                        $ac = new ActividadHasProveedores();
+                        $arr = array();
+                        $arr = $ac->find_all_by_sql("select p.id as id from actividad_has_proveedores ap, 
+                        actividad a, proveedores p, seccion s, division d
+                        where ap.actividad_id=a.id and a.division_id = d.id
+                        and d.seccion_id = s.id and ap.proveedores_id=p.id
+                        and d.id = $iddivision");
+
+                        $this->proveedores = array();
+                        $i = 0;
+                        foreach ($arr as $obj) {
+                            $prov = new Proveedores();
+                            $x = $prov->find_first($obj->id);
+                            $this->proveedores[$i] = $x;
+                            $i++;
+                        }
+                        $div = new Division();
+                        $div->find_first($iddivision);
+                        Flash::info("Buscando por la división:" . $div->nombre);
+                    } else {
+                        $ac = new ActividadHasProveedores();
+                        $arr = array();
+                        $arr = $ac->find("actividad_id=$idactividad");
+                        $this->proveedores = array();
+                        $i = 0;
+                        foreach ($arr as $obj) {
+                            $prov = new Proveedores();
+                            $x = $prov->find_first($obj->proveedores_id);
+                            $this->proveedores[$i] = $x;
+                            $i++;
+                        }
+                        $act = new Actividad();
+                        $act->find_first($idactividad);
+                        Flash::info("Buscando por la actividad:" . $act->nombre);
+                    }
                 }
             }
+
+
 
             if (Input::hasPost("textoBusqueda")) {
                 $comboBusqueda = Input::post("comboBusqueda");
@@ -317,6 +375,7 @@ class AdminController extends ApplicationController {
         $this->contratos = $obj->paginar($pagina, $idpro);
     }
 
+    //reporte de proveedores
     function reportepdf1() {
         Load::lib("PHPExcel/PHPExcel");
 
@@ -347,6 +406,21 @@ class AdminController extends ApplicationController {
         }
     }
 
+    function reportecontratotodos(){
+        Load::lib("PHPExcel/PHPExcel");
+
+        $prov = new Proveedores();
+        $arr = array();
+        $arr = $prov->find();
+
+        if (count($arr) > 0) {
+            $this->matriz = $arr;
+        } else {
+            Flash::error("No seleccionó ningún proveedor");
+            Router::redirect("admin/proveedores");
+        }
+    }
+    
     //asocia actividades antiguas a los proveedores
     function borrar() {
         Load::models("Antiguoactividad", "Actividad");
@@ -493,6 +567,22 @@ class AdminController extends ApplicationController {
         $con = new Contratos();
         $this->arr = array();
         $this->arr = $con->getRepProveedor($idproveedor);
+    }
+
+    //reporte de contratos temporal
+    function reportecontratostemp() {
+        Load::lib("PHPExcel/PHPExcel");
+
+        if (isset($_SESSION['reporte'])) {
+
+            if (count($_SESSION['reporte']) > 0) {
+
+                $this->matriz = $_SESSION['reporte'];
+            }
+        } else {
+            Flash::error("No seleccionó ningún proveedor");
+            Router::redirect("admin/proveedores");
+        }
     }
 
     function repExProv($idproveedor) {

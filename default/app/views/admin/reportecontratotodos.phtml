@@ -1,0 +1,61 @@
+
+<?
+
+/* Here there will be some code where you create $objPHPExcel */
+
+$ruta = APP_PATH . "temp/templates_informes/template_evaluacionproveedorestotal.xlsx";
+
+
+$objPHPExcel = PHPExcel_IOFactory::load($ruta);
+// Set properties
+$objPHPExcel->getProperties()->setCreator("Empopasto S.A")
+        ->setLastModifiedBy("Empopasto S.A")
+        ->setTitle("Reporte de proveedor")
+        ->setSubject("Reporte de proveedor")
+        ->setDescription("Reporte de proveedor")
+        ->setKeywords("reporte proveedor")
+        ->setCategory("Reportes");
+$objPHPExcel->getActiveSheet()->setTitle('Reporte contratos proveedor');
+
+$objPHPExcel->setActiveSheetIndex(0);
+$fila = 7;
+
+for($i=0;$i<count($matriz);$i++){
+
+    $val = $matriz[$i]->id;
+    
+    $con = new Contratos();
+    
+    //consultar contratos
+    $arrcontrato = array(); 
+    $arrcontrato = $con->getRepProveedor($val);
+    
+    $pond = $con->getPonderadoPorProveedor($val);
+
+    foreach ($arrcontrato as $obj) {
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(0, $fila, $obj->id);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(1, $fila, $obj->identificacion);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(2, $fila, $obj->razonsocial);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(3, $fila, $obj->numero);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(4, $fila, $obj->objeto);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(5, $fila, $obj->valorini);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(6, $fila, $obj->fechaini);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(7, $fila, $obj->fechafinal);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(8, $fila, $obj->puntaje);
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(9, $fila, $pond);
+
+        $fila++;
+    }
+}
+$fila+=2;
+
+$fecha = date("Ymdhis");
+
+$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+$nombre = 'reportes/MyExcelContratosTemp' . $fecha . '.xlsx';
+
+
+$objWriter->save("$nombre");
+//$objWriter->save('php://output');
+echo "<a href='" . PUBLIC_PATH . $nombre . "'>Descargar reporte en Excel</a>";
+?>

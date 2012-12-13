@@ -1,0 +1,30 @@
+[Tue, 11 Dec 12 17:31:34 -0500][CRITICAL] exception 'KumbiaException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 al ejecutar <em>"SELECT id,actividad_id,proveedores_id FROM actividad_has_proveedores WHERE actividad_id="</em>' in C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\db\adapters\mysql.php:163
+Stack trace:
+#0 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\db\db_base.php(82): DbMySQL->query('SELECT id,activ...')
+#1 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\kumbia_active_record\kumbia_active_record.php(827): DbBase->in_query('SELECT id,activ...')
+#2 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\app\controllers\admin_controller.php(157): KumbiaActiveRecord->find('actividad_id=')
+#3 [internal function]: AdminController->proveedores()
+#4 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\kumbia\dispatcher.php(79): ReflectionMethod->invokeArgs(Object(AdminController), Array)
+#5 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\kumbia\bootstrap.php(138): Dispatcher::execute(Array)
+#6 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\public\index.php(83): require('C:\xampp\htdocs...')
+#7 {main}
+[Tue, 11 Dec 12 17:32:22 -0500][CRITICAL] exception 'KumbiaException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 al ejecutar <em>"SELECT id,actividad_id,proveedores_id FROM actividad_has_proveedores WHERE actividad_id="</em>' in C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\db\adapters\mysql.php:163
+Stack trace:
+#0 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\db\db_base.php(82): DbMySQL->query('SELECT id,activ...')
+#1 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\kumbia_active_record\kumbia_active_record.php(827): DbBase->in_query('SELECT id,activ...')
+#2 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\app\controllers\admin_controller.php(157): KumbiaActiveRecord->find('actividad_id=')
+#3 [internal function]: AdminController->proveedores()
+#4 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\kumbia\dispatcher.php(79): ReflectionMethod->invokeArgs(Object(AdminController), Array)
+#5 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\kumbia\bootstrap.php(138): Dispatcher::execute(Array)
+#6 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\public\index.php(83): require('C:\xampp\htdocs...')
+#7 {main}
+[Tue, 11 Dec 12 17:34:10 -0500][CRITICAL] exception 'KumbiaException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 al ejecutar <em>"SELECT id,actividad_id,proveedores_id FROM actividad_has_proveedores WHERE actividad_id="</em>' in C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\db\adapters\mysql.php:163
+Stack trace:
+#0 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\db\db_base.php(82): DbMySQL->query('SELECT id,activ...')
+#1 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\libs\kumbia_active_record\kumbia_active_record.php(827): DbBase->in_query('SELECT id,activ...')
+#2 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\app\controllers\admin_controller.php(157): KumbiaActiveRecord->find('actividad_id=')
+#3 [internal function]: AdminController->proveedores()
+#4 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\kumbia\dispatcher.php(79): ReflectionMethod->invokeArgs(Object(AdminController), Array)
+#5 C:\xampp\htdocs\sistemas\empopasto_proveedores\core\kumbia\bootstrap.php(138): Dispatcher::execute(Array)
+#6 C:\xampp\htdocs\sistemas\empopasto_proveedores\default\public\index.php(83): require('C:\xampp\htdocs...')
+#7 {main}
