@@ -377,6 +377,11 @@ class AdminController extends ApplicationController {
 
     //reporte de proveedores
     function reportepdf1() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::lib("PHPExcel/PHPExcel");
 
         if (isset($_SESSION['reporte'])) {
@@ -392,6 +397,11 @@ class AdminController extends ApplicationController {
     }
 
     function reportepdftodos() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::lib("PHPExcel/PHPExcel");
 
         $prov = new Proveedores();
@@ -406,7 +416,12 @@ class AdminController extends ApplicationController {
         }
     }
 
-    function reportecontratotodos(){
+    function reportecontratotodos() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::lib("PHPExcel/PHPExcel");
 
         $prov = new Proveedores();
@@ -420,9 +435,16 @@ class AdminController extends ApplicationController {
             Router::redirect("admin/proveedores");
         }
     }
-    
-    //asocia actividades antiguas a los proveedores
+
+    //asocia actividades antiguas a los proveedores no eliminar
     function borrar() {
+
+        /*
+        $default = ini_get('max_execution_time');
+        set_time_limit(1000);
+
+
+
         Load::models("Antiguoactividad", "Actividad");
         $array = array();
         $act = new Antiguoactividad();
@@ -453,10 +475,16 @@ class AdminController extends ApplicationController {
                 Flash::notice("prveedor no encontrado" . $obj->identificacion);
             }
         }
+        set_time_limit($default);*/
     }
 
     //SUBIDA DE PLANOS
     public function subirplano() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::lib('Excel/reader');
         View::select('subirplano');  //para mostrar siempre la vista con los formularios
         if (Input::hasPost('oculto')) {  //para saber si se envió el form
@@ -563,6 +591,11 @@ class AdminController extends ApplicationController {
 
     //saca en excel los contratos del proveedor seleccionado
     function repExContratoProv($idproveedor) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::lib("PHPExcel/PHPExcel");
         $con = new Contratos();
         $this->arr = array();
@@ -571,6 +604,11 @@ class AdminController extends ApplicationController {
 
     //reporte de contratos temporal
     function reportecontratostemp() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::lib("PHPExcel/PHPExcel");
 
         if (isset($_SESSION['reporte'])) {
@@ -586,6 +624,11 @@ class AdminController extends ApplicationController {
     }
 
     function repExProv($idproveedor) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::lib("PHPExcel/PHPExcel");
         $pro = new Proveedores();
         $this->arr = array();
@@ -595,6 +638,11 @@ class AdminController extends ApplicationController {
     }
 
     function repExProvVertical($idproveedor) {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         View::template("asistente/default_ribbon");
         Load::models("actividad", "division", "seccion", "proveedores", "tipo_identificacion", "tipo_entidad", "ciudad", "contratos");
         Load::lib("PHPExcel/PHPExcel");
@@ -607,6 +655,11 @@ class AdminController extends ApplicationController {
     }
 
     function guardartemp() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         Load::lib("PHPExcel/PHPExcel");
 
         if (Input::hasPost("id")) {
@@ -626,6 +679,11 @@ class AdminController extends ApplicationController {
     }
 
     function borrartemp() {
+        
+        if (!Auth::is_valid()) {
+            $this->redirect("sesion/index");
+        }
+        
         unset($_SESSION['reporte']);
         Flash::success("Temporal eliminado");
         Router::redirect("admin/proveedores");

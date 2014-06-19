@@ -1,40 +1,42 @@
 <style>
-            #form_logueo label.control-label{
-                width: 75px !important;
-            }
-            #form_logueo .controls{
-                margin-left: 90px !important;
-            }
-        </style>
+    #form_logueo label.control-label{
+        width: 75px !important;
+    }
+    #form_logueo .controls{
+        margin-left: 90px !important;
+    }
+</style>
 <div class="container">
     <div id="contenido" class="content">
-        <div id="form_logueo" class="modal" style="position:relative; top: auto; left: auto; margin: 0 auto; z-index: 1">
+        <p>&nbsp;</p>
+        <div id="form_logueo" class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1; text-align: justify;">
             <div class="modal-header">
-                <h3>Iniciar Sesi&oacute;n</h3>                        
+                <h3>Iniciar Sesi&oacute;n</h3>
+                <p>La Empresa de Obras Sanitarias de Pasto EMPOPASTO S.A. E.S.P, cuenta con medios oficiales de comunicación electrónica: el portal web habilitado en servicio las 24 horas del días: www.empopasto.com.co, así mismo correos institucionales debidamente licenciados, los cuales son manejados bajo políticas vigentes de gobierno en línea. El presente registro, como proveedor ó proponente, de su dirección de correo electrónico es aceptación expresa y de autorización a EMPOPASTO S.A. E.S.P para usar la misma como medio de actuación de EMPOPASTO S.A. E.S.P. para enviarle comunicaciones oficiales.<br />
+                </p>
             </div>
             <div class="modal-body">
-                        <?php View::content() ?>
-                        <?php echo Form::open(NULL, 'post', 'class="form-horizontal"') ?>
+                <?php View::content() ?>
+                <?php echo Form::open(NULL, 'post', 'class="form-horizontal"') ?>
                 <div class="control-group">
                     <label class="control-label" for="identificacion">Identificación </label>
                     <div class="controls">
-                                <?php echo Form::text('identificacion') ?>
+                        <?php echo Form::text('identificacion') ?>
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="clave">Contrase&ntilde;a </label>
                     <div class="controls">
-                                <?php echo Form::pass('clave'/*,'autocomplete="off"'*/) ?>
+                        <?php echo Form::pass('clave'/* ,'autocomplete="off"' */) ?>
                     </div>
+                    <div><? echo Html::link("sesion/recordar", "Recordar contraseña") ?></div>
                 </div>
             </div>
-            <div         class="modal-footer">
-
-                            <?php echo Html::link('asistente/asistente1','Registrate') ?>
-
-                        <?php echo Form::submit('Ingresar', 'class="btn btn-primary btn-large"') ?>
+            <div class="modal-footer">
+                <?php echo Html::link('asistente/asistente1', 'Registrate') ?>
+                <?php echo Form::submit('Ingresar', 'class="btn btn-primary btn-large"') ?>
             </div>
-                    <?php echo Form::close() ?>
+            <?php echo Form::close() ?>
         </div>
     </div>
 

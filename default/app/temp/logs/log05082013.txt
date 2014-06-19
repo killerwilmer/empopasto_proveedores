@@ -1,0 +1,13 @@
+[Mon, 05 Aug 13 01:23:14 -0400][CRITICAL] exception 'KumbiaException' with message 'Access denied for user 'root'@'localhost' (using password: NO)' in /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/core/libs/db/adapters/mysql.php:135
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/core/libs/db/adapters/mysql.php(203): DbMySQL->connect(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/core/libs/db/db.php(97): DbMySQL->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/core/libs/db/db.php(64): Db::connect('development')
+#3 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/core/libs/kumbia_active_record/kumbia_active_record.php(546): Db::factory(NULL, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/core/libs/kumbia_active_record/kumbia_active_record.php(275): KumbiaActiveRecord->_connect()
+#5 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/default/app/controllers/admin_controller.php(104): KumbiaActiveRecord->__construct()
+#6 [internal function]: AdminController->proveedores()
+#7 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/core/kumbia/dispatcher.php(79): ReflectionMethod->invokeArgs(Object(AdminController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/core/kumbia/bootstrap.php(138): Dispatcher::execute(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/empopasto_proveedores/default/public/index.php(83): require('/Applications/X...')
+#10 {main}

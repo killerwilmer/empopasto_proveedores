@@ -12,6 +12,9 @@
  */
 
 View::template("sesion/logueo");
+
+
+
 class SesionController extends AppController {
     //put your code here
     function index(){
@@ -45,6 +48,35 @@ class SesionController extends AppController {
         Session::delete("idproveedor");
         Session::delete("idtipoproveedor");
         Router::redirect("sesion/index");
+    }
+    
+    function recordar(){
+        
+        Load::model("proveedores");
+        
+        if(Input::hasPost("correo")){
+            
+            Load::model("proveedores");
+            
+            $email = Input::post("correo");
+            
+            Load::lib("Email//Email");
+
+            $usu = new Proveedores();
+            $condicion = "email='$email'";
+            $usu->find_first($condicion);
+
+            if ($usu) {
+
+                $mensaje = "Su contraseña es:".$usu->clave;
+                $html= "Mensaje: " . $mensaje . "\n";
+                Email::enviar($email,$html);
+                Flash::notice("La contraseña fue enviada a su email.");
+            }
+            else{
+                Flash::warning("Usuario no encontrado en la base de datos");
+            }
+        }
     }
 }
 

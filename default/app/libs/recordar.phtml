@@ -1,0 +1,38 @@
+
+<style>
+            #form_logueo label.control-label{
+                width: 75px !important;
+            }
+            #form_logueo .controls{
+                margin-left: 90px !important;
+            }
+        </style>
+<div class="container">
+    <div id="contenido" class="content">
+        <div id="form_logueo" class="modal" style="position:relative; top: auto; left: auto; margin: 0 auto; z-index: 1">
+            <div class="modal-header">
+                <h3>Recordar contraseña:</h3>                        
+            </div>
+            <div class="modal-body">
+                        <?php View::content() ?>
+                        <?php echo Form::open(NULL, 'post', 'class="form-horizontal"') ?>
+                <div class="control-group">
+                    <label class="control-label" for="identificacion">Escriba su correo: </label>
+                    <div class="controls">
+                                <?php echo Form::text('correo') ?>
+                    </div>
+                </div>
+                
+            </div>
+            <div         class="modal-footer">
+
+                            
+
+                        <?php echo Form::submit('Enviar mi contraseña', 'class="btn btn-primary btn-large"') ?>
+            </div>
+                    <?php echo Form::close() ?>
+        </div>
+    </div>
+
+</div>
+

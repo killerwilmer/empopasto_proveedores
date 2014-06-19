@@ -6,6 +6,7 @@
 <?php
 View::partial('backend/barra_superior_listas', FALSE, array('texto' => 'Crear Usuario', 'opciones' => FALSE));
 $dt = new DataTable($proveedores);
+
 $dt->addHeaders('id', 'Identificacion', 'Nombre / Razon Social','Nombres', 'Apellidos' ,'Direccion', 'Celular', 'Editar', 'Eliminar');
 $dt->addFields('id', 'identificacion', 'razonsocial', 'nombres', 'apellidos', 'direccion', 'celular');
 $dt->imgLink('figuras/editar.png', 'proveedores/editar');

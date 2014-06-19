@@ -397,7 +397,7 @@ class DataTable {
             else
                 $this->_url = Router::get('controller') . '/' . Router::get('action') . '/';
         }
-        if (!$this->_type_paginator) {
+       /* if (!$this->_type_paginator) {
             $html = '<div class="paginador-tabla">';
             if ($this->_paginator->count > $this->_paginator->per_page) {
                 if ($this->_paginator->prev) {
@@ -414,7 +414,8 @@ class DataTable {
             }
             $html .= '<span style="float:right;margin-right:20px;"><b>Total registros: ' . $this->_paginator->count . '</b></span></div>';
             return $html;
-        } else {
+        } else {*/
+            $this->_type_paginator = "punbb";
             $parametros = array(
                 'page' => $this->_paginator,
                 'url' => substr($this->_url, 0, strlen($this->_url) - 1)
@@ -424,7 +425,7 @@ class DataTable {
             $paginador = ob_get_contents();
             ob_get_clean();
             return $paginador;
-        }
+        //}
     }
 
     /**

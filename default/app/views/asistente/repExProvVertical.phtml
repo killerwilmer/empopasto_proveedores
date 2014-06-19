@@ -47,9 +47,9 @@ $objPHPExcel->setActiveSheetIndex(0)->setCellValue("E27",$con->getPonderadoPorPr
 
 $fila = 32;
 
-foreach ($actividades as $obj) {
+foreach ($actividades as $iss) {
     $ac = new Actividad();
-    $ac->find_first($obj->id);
+    $ac->find_first($iss->actividad_id); 
     $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow(3, $fila, $ac->nombre);
     $div = new Division();
     $div->find_first($ac->division_id);
@@ -74,3 +74,5 @@ $objWriter->save("$nombre");
 //$objWriter->save('php://output');
 echo "<a href='".PUBLIC_PATH.$nombre."'>Descargar reporte en Excel</a>";
 ?>
+<br>
+<?echo Html::link("asistente/editar", "Volver","class='btn btn-primary'")?>
